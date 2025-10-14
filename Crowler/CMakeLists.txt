@@ -20,7 +20,7 @@ target_link_libraries(CrowlerApp OpenSSL::SSL)
 
 target_include_directories(ini_file PUBLIC "../ini_file")
 
-target_link_libraries(CrowlerApp ini_file)
+target_link_libraries(CrowlerApp)
 
 target_include_directories(data_base PUBLIC "../data_base")
 

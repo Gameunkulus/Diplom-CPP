@@ -1,0 +1,8 @@
+Package: range-v3
+Version: 0.12.0
+Port-Version: 1
+Depends: vcpkg-cmake, vcpkg-cmake-config
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 119ac85fd11d002fccc0a8884813005d27f7de195542ec5049a9110ad67fced0
+Description: Range library for C++11/14/17/20.

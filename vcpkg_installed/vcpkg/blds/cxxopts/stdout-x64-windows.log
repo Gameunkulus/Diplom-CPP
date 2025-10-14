@@ -1,0 +1,15 @@
+Downloading https://github.com/jarro2783/cxxopts/archive/v3.1.1.tar.gz -> jarro2783-cxxopts-v3.1.1.tar.gz
+Successfully downloaded jarro2783-cxxopts-v3.1.1.tar.gz
+-- Extracting source C:/Users/bugr2/AppData/Local/vcpkg/downloads/jarro2783-cxxopts-v3.1.1.tar.gz
+-- Using source at C:/Users/bugr2/source/repos/Diplom_CPP/vcpkg_installed/vcpkg/blds/cxxopts/src/v3.1.1-6b7980cd99.clean
+-- Found external ninja('1.12.1').
+-- Configuring x64-windows
+-- Building x64-windows-dbg
+-- Building x64-windows-rel
+-- Fixing pkgconfig file: C:/Users/bugr2/source/repos/Diplom_CPP/vcpkg_installed/vcpkg/pkgs/cxxopts_x64-windows/lib/pkgconfig/cxxopts.pc
+-- Using cached msys2-mingw-w64-x86_64-pkgconf-1~2.3.0-1-any.pkg.tar.zst
+-- Using cached msys2-msys2-runtime-3.5.4-2-x86_64.pkg.tar.zst
+-- Using msys root at C:/Users/bugr2/AppData/Local/vcpkg/downloads/tools/msys2/21caed2f81ec917b
+-- Fixing pkgconfig file: C:/Users/bugr2/source/repos/Diplom_CPP/vcpkg_installed/vcpkg/pkgs/cxxopts_x64-windows/debug/lib/pkgconfig/cxxopts.pc
+-- Installing: C:/Users/bugr2/source/repos/Diplom_CPP/vcpkg_installed/vcpkg/pkgs/cxxopts_x64-windows/share/cxxopts/copyright
+-- Выполнение проверки после сборки

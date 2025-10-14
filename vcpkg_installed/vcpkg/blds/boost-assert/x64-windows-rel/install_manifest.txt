@@ -1,0 +1,6 @@
+C:/Users/bugr2/source/repos/Diplom_CPP/vcpkg_installed/vcpkg/pkgs/boost-assert_x64-windows/include/boost/assert/source_location.hpp
+C:/Users/bugr2/source/repos/Diplom_CPP/vcpkg_installed/vcpkg/pkgs/boost-assert_x64-windows/include/boost/assert.hpp
+C:/Users/bugr2/source/repos/Diplom_CPP/vcpkg_installed/vcpkg/pkgs/boost-assert_x64-windows/include/boost/current_function.hpp
+C:/Users/bugr2/source/repos/Diplom_CPP/vcpkg_installed/vcpkg/pkgs/boost-assert_x64-windows/lib/cmake/boost_assert-1.87.0/boost_assert-targets.cmake
+C:/Users/bugr2/source/repos/Diplom_CPP/vcpkg_installed/vcpkg/pkgs/boost-assert_x64-windows/lib/cmake/boost_assert-1.87.0/boost_assert-config.cmake
+C:/Users/bugr2/source/repos/Diplom_CPP/vcpkg_installed/vcpkg/pkgs/boost-assert_x64-windows/lib/cmake/boost_assert-1.87.0/boost_assert-config-version.cmake

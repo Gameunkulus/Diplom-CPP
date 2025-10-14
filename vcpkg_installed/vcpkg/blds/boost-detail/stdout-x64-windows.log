@@ -1,0 +1,9 @@
+Downloading https://github.com/boostorg/detail/archive/boost-1.80.0.tar.gz -> boostorg-detail-boost-1.80.0.tar.gz
+Successfully downloaded boostorg-detail-boost-1.80.0.tar.gz
+-- Extracting source C:/Users/bugr2/AppData/Local/vcpkg/downloads/boostorg-detail-boost-1.80.0.tar.gz
+-- Using source at C:/Users/bugr2/source/repos/Diplom_CPP/vcpkg_installed/vcpkg/blds/boost-detail/src/ost-1.80.0-7ab8702b1e.clean
+-- Copying headers
+-- Copying headers done
+-- Installing: C:/Users/bugr2/source/repos/Diplom_CPP/vcpkg_installed/vcpkg/pkgs/boost-detail_x64-windows/share/boost-detail/usage
+-- Installing: C:/Users/bugr2/source/repos/Diplom_CPP/vcpkg_installed/vcpkg/pkgs/boost-detail_x64-windows/share/boost-detail/copyright
+-- Выполнение проверки после сборки

@@ -1,5 +1,15 @@
 {
-  "dependencies": [
-    "fmt"
-  ]
+    "dependencies": [
+        "libpqxx",
+        "boost-optional",
+        "cxxopts",
+        "fmt",
+        "range-v3"
+    ],
+    "overrides": [
+        {
+            "name": "boost-optional",
+            "version": "1.80.0"
+        }
+    ]
 }

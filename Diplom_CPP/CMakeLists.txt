@@ -1,4 +1,5 @@
-﻿
+﻿cmake_minimum_required(VERSION 3.22.0)
+
 
 add_executable (Diplom_CPP "Diplom_CPP.cpp" "Diplom_CPP.h")
 

@@ -1,0 +1,2 @@
+C:/Users/bugr2/source/repos/Diplom_CPP/vcpkg_installed/vcpkg/blds/openssl/x64-windows-rel/CMakeFiles/edit_cache.dir
+C:/Users/bugr2/source/repos/Diplom_CPP/vcpkg_installed/vcpkg/blds/openssl/x64-windows-rel/CMakeFiles/rebuild_cache.dir

@@ -8,8 +8,8 @@
 #include <Windows.h>
 #include "http_connection.h"
 
-#include "../ini_parser/ini_parser.h"
-#include "../data_base/data_base.h"
+#include "../Ini/ini_file.h"
+#include "../data/data_base.h"
 
 void httpServer(tcp::acceptor& acceptor, tcp::socket& socket, data_base& db)
 {

@@ -1,0 +1,2 @@
+C:/Users/bugr2/source/repos/Diplom_CPP/vcpkg_installed/vcpkg/pkgs/boost-cmake_x64-windows/share/boost/BoostConfigVersion.cmake
+C:/Users/bugr2/source/repos/Diplom_CPP/vcpkg_installed/vcpkg/pkgs/boost-cmake_x64-windows/share/boost/BoostConfig.cmake

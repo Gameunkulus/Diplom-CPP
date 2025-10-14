@@ -1,4 +1,4 @@
-#include "data_base.h"
+#include "../data/data_base.h"
 
 data_base::data_base(const std::string& idb) :conn_db_{ pqxx::connection(idb) }
 {
@@ -9,11 +9,6 @@ data_base::data_base(const std::string& idb) :conn_db_{ pqxx::connection(idb) }
 		"(SELECT id FROM keywords WHERE keyword = $1),"
 		"(SELECT id FROM urls WHERE url = $2), $3)");
 }
-
-//data_base::data_base(const data_base& db)
-//{
-//	conn_db_ = std::move(db.conn_db_);
-//}
 
 void data_base::add_keyword_link(const std::map<std::string, unsigned int>& words, const std::string& link)
 {

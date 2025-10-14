@@ -1,0 +1,29 @@
+Downloading https://github.com/boostorg/boost/archive/boost-1.87.0.tar.gz -> boostorg-boost-boost-1.87.0.tar.gz
+Successfully downloaded boostorg-boost-boost-1.87.0.tar.gz
+-- Extracting source C:/Users/bugr2/AppData/Local/vcpkg/downloads/boostorg-boost-boost-1.87.0.tar.gz
+-- Using source at C:/Users/bugr2/source/repos/Diplom_CPP/vcpkg_installed/vcpkg/blds/boost-cmake/src/ost-1.87.0-e7ace312a5.clean
+Downloading https://github.com/boostorg/cmake/archive/boost-1.87.0.tar.gz -> boostorg-cmake-boost-1.87.0.tar.gz
+Successfully downloaded boostorg-cmake-boost-1.87.0.tar.gz
+-- Extracting source C:/Users/bugr2/AppData/Local/vcpkg/downloads/boostorg-cmake-boost-1.87.0.tar.gz
+-- Applying patch vcpkg-build.diff
+-- Applying patch fix-mpi.diff
+-- Applying patch no-prefix.diff
+-- Applying patch no-config-suffix.diff
+-- Applying patch no-honor-static.diff
+-- Applying patch add-optional-deps.diff
+-- Using source at C:/Users/bugr2/source/repos/Diplom_CPP/vcpkg_installed/vcpkg/blds/boost-cmake/src/ost-1.87.0-c89d1e33d6.clean
+-- Installing: C:/Users/bugr2/source/repos/Diplom_CPP/vcpkg_installed/vcpkg/pkgs/boost-cmake_x64-windows/share/boost-cmake/usage
+-- Found external ninja('1.12.1').
+-- Configuring x64-windows
+-- Building x64-windows-dbg
+-- Building x64-windows-rel
+-- Up-to-date: C:/Users/bugr2/source/repos/Diplom_CPP/vcpkg_installed/vcpkg/pkgs/boost-cmake_x64-windows/share/boost/cmake-build
+-- Installing: C:/Users/bugr2/source/repos/Diplom_CPP/vcpkg_installed/vcpkg/pkgs/boost-cmake_x64-windows/share/boost/cmake-build/BoostFetch.cmake
+-- Installing: C:/Users/bugr2/source/repos/Diplom_CPP/vcpkg_installed/vcpkg/pkgs/boost-cmake_x64-windows/share/boost/cmake-build/BoostInstall.cmake
+-- Installing: C:/Users/bugr2/source/repos/Diplom_CPP/vcpkg_installed/vcpkg/pkgs/boost-cmake_x64-windows/share/boost/cmake-build/BoostMessage.cmake
+-- Installing: C:/Users/bugr2/source/repos/Diplom_CPP/vcpkg_installed/vcpkg/pkgs/boost-cmake_x64-windows/share/boost/cmake-build/BoostRoot.cmake
+-- Installing: C:/Users/bugr2/source/repos/Diplom_CPP/vcpkg_installed/vcpkg/pkgs/boost-cmake_x64-windows/share/boost/cmake-build/BoostTest.cmake
+-- Installing: C:/Users/bugr2/source/repos/Diplom_CPP/vcpkg_installed/vcpkg/pkgs/boost-cmake_x64-windows/share/boost/cmake-build/BoostTestJamfile.cmake
+-- Installing: C:/Users/bugr2/source/repos/Diplom_CPP/vcpkg_installed/vcpkg/pkgs/boost-cmake_x64-windows/share/boost-cmake/vcpkg-port-config.cmake
+-- Installing: C:/Users/bugr2/source/repos/Diplom_CPP/vcpkg_installed/vcpkg/pkgs/boost-cmake_x64-windows/share/boost-cmake/copyright
+-- Выполнение проверки после сборки

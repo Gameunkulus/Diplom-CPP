@@ -1,0 +1,7 @@
+prefix=C:/Users/bugr2/source/repos/Diplom_CPP/vcpkg_installed/vcpkg/pkgs/cxxopts_x64-windows/debug
+includedir=${prefix}/include
+
+Name: cxxopts
+Description: 
+Version: 3.1.1
+Cflags: -I${includedir}

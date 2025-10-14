@@ -1,0 +1,4 @@
+C:/Users/bugr2/source/repos/Diplom_CPP/vcpkg_installed/vcpkg/pkgs/zlib_x64-windows/lib/zlib.lib
+C:/Users/bugr2/source/repos/Diplom_CPP/vcpkg_installed/vcpkg/pkgs/zlib_x64-windows/bin/zlib1.dll
+C:/Users/bugr2/source/repos/Diplom_CPP/vcpkg_installed/vcpkg/pkgs/zlib_x64-windows/include/zconf.h
+C:/Users/bugr2/source/repos/Diplom_CPP/vcpkg_installed/vcpkg/pkgs/zlib_x64-windows/include/zlib.h

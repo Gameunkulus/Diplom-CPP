@@ -18,7 +18,7 @@ target_link_libraries(HttpServerApp ${Boost_LIBRARIES})
 
 target_link_libraries(HttpServerApp OpenSSL::SSL)
 
-target_include_directories(ini_file PUBLIC "../ini_parser")
+target_include_directories(ini_file PUBLIC "../ini_file")
 
 target_link_libraries(HttpServerApp ini_file)
 

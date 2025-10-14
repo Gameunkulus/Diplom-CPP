@@ -1,0 +1,9 @@
+Downloading https://github.com/boostorg/predef/archive/boost-1.80.0.tar.gz -> boostorg-predef-boost-1.80.0.tar.gz
+Successfully downloaded boostorg-predef-boost-1.80.0.tar.gz
+-- Extracting source C:/Users/bugr2/AppData/Local/vcpkg/downloads/boostorg-predef-boost-1.80.0.tar.gz
+-- Using source at C:/Users/bugr2/source/repos/Diplom_CPP/vcpkg_installed/vcpkg/blds/boost-predef/src/ost-1.80.0-24617b11c0.clean
+-- Copying headers
+-- Copying headers done
+-- Installing: C:/Users/bugr2/source/repos/Diplom_CPP/vcpkg_installed/vcpkg/pkgs/boost-predef_x64-windows/share/boost-predef/usage
+-- Installing: C:/Users/bugr2/source/repos/Diplom_CPP/vcpkg_installed/vcpkg/pkgs/boost-predef_x64-windows/share/boost-predef/copyright
+-- Выполнение проверки после сборки

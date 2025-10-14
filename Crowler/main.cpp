@@ -8,8 +8,8 @@
 #include "http_ustils.h"
 #include <functional>
 
-#include "../ini_parser/ini_parser.h"
-#include "../data_base/data_base.h"
+#include "../Ini/ini_file.h"
+#include "../data/data_base.h"
 
 #include <boost/locale.hpp>
 #include <regex>

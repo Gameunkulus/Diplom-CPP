@@ -1,0 +1,9 @@
+Downloading https://github.com/boostorg/winapi/archive/boost-1.80.0.tar.gz -> boostorg-winapi-boost-1.80.0.tar.gz
+Successfully downloaded boostorg-winapi-boost-1.80.0.tar.gz
+-- Extracting source C:/Users/bugr2/AppData/Local/vcpkg/downloads/boostorg-winapi-boost-1.80.0.tar.gz
+-- Using source at C:/Users/bugr2/source/repos/Diplom_CPP/vcpkg_installed/vcpkg/blds/boost-winapi/src/ost-1.80.0-95b6967b43.clean
+-- Copying headers
+-- Copying headers done
+-- Installing: C:/Users/bugr2/source/repos/Diplom_CPP/vcpkg_installed/vcpkg/pkgs/boost-winapi_x64-windows/share/boost-winapi/usage
+-- Installing: C:/Users/bugr2/source/repos/Diplom_CPP/vcpkg_installed/vcpkg/pkgs/boost-winapi_x64-windows/share/boost-winapi/copyright
+-- Выполнение проверки после сборки

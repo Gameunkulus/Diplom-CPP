@@ -1,0 +1,9 @@
+Downloading https://github.com/boostorg/throw_exception/archive/boost-1.80.0.tar.gz -> boostorg-throw_exception-boost-1.80.0.tar.gz
+Successfully downloaded boostorg-throw_exception-boost-1.80.0.tar.gz
+-- Extracting source C:/Users/bugr2/AppData/Local/vcpkg/downloads/boostorg-throw_exception-boost-1.80.0.tar.gz
+-- Using source at C:/Users/bugr2/source/repos/Diplom_CPP/vcpkg_installed/vcpkg/blds/boost-throw-exception/src/ost-1.80.0-728ecd3cb5.clean
+-- Copying headers
+-- Copying headers done
+-- Installing: C:/Users/bugr2/source/repos/Diplom_CPP/vcpkg_installed/vcpkg/pkgs/boost-throw-exception_x64-windows/share/boost-throw-exception/usage
+-- Installing: C:/Users/bugr2/source/repos/Diplom_CPP/vcpkg_installed/vcpkg/pkgs/boost-throw-exception_x64-windows/share/boost-throw-exception/copyright
+-- Выполнение проверки после сборки

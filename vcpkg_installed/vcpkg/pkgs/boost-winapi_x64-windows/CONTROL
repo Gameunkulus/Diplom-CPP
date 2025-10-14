@@ -1,0 +1,7 @@
+Package: boost-winapi
+Version: 1.80.0
+Depends: boost-config, boost-predef, boost-vcpkg-helpers
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 4b3b0e19bf11680c20c7777c08baabd7ff1656eecf076e7a42c598a395c621e0
+Description: Boost winapi module

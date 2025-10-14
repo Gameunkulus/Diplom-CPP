@@ -1,0 +1,14 @@
+-- Using cached ericniebler-range-v3-a81477931a8aa2ad025c6bda0609f38e09e4d7ec.tar.gz
+-- Cleaning sources at C:/Users/bugr2/source/repos/Diplom_CPP/vcpkg_installed/vcpkg/blds/range-v3/src/8e09e4d7ec-ac2933c7cd.clean. Use --editable to skip cleaning for the packages you specify.
+-- Extracting source C:/Users/bugr2/AppData/Local/vcpkg/downloads/ericniebler-range-v3-a81477931a8aa2ad025c6bda0609f38e09e4d7ec.tar.gz
+-- Using source at C:/Users/bugr2/source/repos/Diplom_CPP/vcpkg_installed/vcpkg/blds/range-v3/src/8e09e4d7ec-ac2933c7cd.clean
+-- Found external ninja('1.12.1').
+-- Configuring x64-windows
+-- Building x64-windows-dbg
+-- Building x64-windows-rel
+-- Installing: C:/Users/bugr2/source/repos/Diplom_CPP/vcpkg_installed/vcpkg/pkgs/range-v3_x64-windows/share/range-v3/copyright
+-- Выполнение проверки после сборки
+C:\Users\bugr2\AppData\Local\vcpkg\registries\git-trees\864506aee2d18e1ff840f863bac8bb7600308ec4\portfile.cmake: warning: Использование следующих ограниченных заголовков может помешать правильной компиляции основной среды выполнения C++ и других пакетов. Вместо этого их следует переименовать или сохранить в подкаталоге. В исключительных случаях это предупреждение можно отключить, добавив set(VCPKG_POLICY_ALLOW_RESTRICTED_HEADERS enabled)
+C:\Users\bugr2\source\repos\Diplom_CPP\vcpkg_installed\vcpkg\pkgs\range-v3_x64-windows\include: note: заголовки здесь относятся к ${CURRENT_PACKAGES_DIR}/include
+note: <module.modulemap>
+C:\Users\bugr2\AppData\Local\vcpkg\registries\git-trees\864506aee2d18e1ff840f863bac8bb7600308ec4\portfile.cmake: warning: Обнаружено проблем с проверкой после сборки: 1. Обычно это вызвано ошибками в portfile.cmake или вышестоящей системе сборки. Исправьте их перед отправкой этого порта в курированный реестр.

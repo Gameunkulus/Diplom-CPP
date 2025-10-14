@@ -1,0 +1,11 @@
+Change Dir: 'C:/Users/bugr2/source/repos/Diplom_CPP/vcpkg_installed/vcpkg/blds/cxxopts/x64-windows-dbg'
+
+Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v -v -j5 install
+[0/1] C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\bugr2\source\repos\Diplom_CPP\vcpkg_installed\vcpkg\blds\cxxopts\x64-windows-dbg && "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -P cmake_install.cmake"
+-- Install configuration: "Debug"
+-- Installing: C:/Users/bugr2/source/repos/Diplom_CPP/vcpkg_installed/vcpkg/pkgs/cxxopts_x64-windows/debug/lib/cmake/cxxopts/cxxopts-config.cmake
+-- Installing: C:/Users/bugr2/source/repos/Diplom_CPP/vcpkg_installed/vcpkg/pkgs/cxxopts_x64-windows/debug/lib/cmake/cxxopts/cxxopts-config-version.cmake
+-- Installing: C:/Users/bugr2/source/repos/Diplom_CPP/vcpkg_installed/vcpkg/pkgs/cxxopts_x64-windows/debug/lib/cmake/cxxopts/cxxopts-targets.cmake
+-- Installing: C:/Users/bugr2/source/repos/Diplom_CPP/vcpkg_installed/vcpkg/pkgs/cxxopts_x64-windows/debug/include/cxxopts.hpp
+-- Installing: C:/Users/bugr2/source/repos/Diplom_CPP/vcpkg_installed/vcpkg/pkgs/cxxopts_x64-windows/debug/lib/pkgconfig/cxxopts.pc
+

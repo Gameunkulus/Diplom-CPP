@@ -1,0 +1,5 @@
+C:/Users/bugr2/source/repos/Diplom_CPP/vcpkg_installed/vcpkg/pkgs/boost-throw-exception_x64-windows/include/boost/exception/exception.hpp
+C:/Users/bugr2/source/repos/Diplom_CPP/vcpkg_installed/vcpkg/pkgs/boost-throw-exception_x64-windows/include/boost/throw_exception.hpp
+C:/Users/bugr2/source/repos/Diplom_CPP/vcpkg_installed/vcpkg/pkgs/boost-throw-exception_x64-windows/lib/cmake/boost_throw_exception-1.87.0/boost_throw_exception-targets.cmake
+C:/Users/bugr2/source/repos/Diplom_CPP/vcpkg_installed/vcpkg/pkgs/boost-throw-exception_x64-windows/lib/cmake/boost_throw_exception-1.87.0/boost_throw_exception-config.cmake
+C:/Users/bugr2/source/repos/Diplom_CPP/vcpkg_installed/vcpkg/pkgs/boost-throw-exception_x64-windows/lib/cmake/boost_throw_exception-1.87.0/boost_throw_exception-config-version.cmake

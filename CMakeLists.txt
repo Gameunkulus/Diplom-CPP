@@ -9,11 +9,11 @@ endif()
 
 project (Diplom_CPP)
 
-set(OPENSSL_ROOT_DIR "C:\\Program Files\\OpenSSL-Win64")
+set(OPENSSL_ROOT_DIR "FindOpenSSL")
 
-set(BOOST_ROOT "C:\\Boost")
+set(BOOST_ROOT "..\\boost_1_80_0")
 
-set(libpqxx_DIR "C:\\Work\\Projects\\libpqxx-7.7.5")
+set(libpqxx_DIR "..\\libpxx-7.7.5")
 
 add_compile_definitions(_WIN32_WINNT=0x0A01)
 
@@ -34,8 +34,6 @@ add_subdirectory(${libpqxx_DIR} libpqxx-build)
 find_package(OpenSSL REQUIRED)
 
 add_subdirectory(CrowlerApp)
-
-add_subdirectory(HttpServerApp)
 
 add_subdirectory(data_base)
 

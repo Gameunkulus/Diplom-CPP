@@ -1,0 +1,9 @@
+Downloading https://github.com/boostorg/type_traits/archive/boost-1.80.0.tar.gz -> boostorg-type_traits-boost-1.80.0.tar.gz
+Successfully downloaded boostorg-type_traits-boost-1.80.0.tar.gz
+-- Extracting source C:/Users/bugr2/AppData/Local/vcpkg/downloads/boostorg-type_traits-boost-1.80.0.tar.gz
+-- Using source at C:/Users/bugr2/source/repos/Diplom_CPP/vcpkg_installed/vcpkg/blds/boost-type-traits/src/ost-1.80.0-775770bd7b.clean
+-- Copying headers
+-- Copying headers done
+-- Installing: C:/Users/bugr2/source/repos/Diplom_CPP/vcpkg_installed/vcpkg/pkgs/boost-type-traits_x64-windows/share/boost-type-traits/usage
+-- Installing: C:/Users/bugr2/source/repos/Diplom_CPP/vcpkg_installed/vcpkg/pkgs/boost-type-traits_x64-windows/share/boost-type-traits/copyright
+-- Выполнение проверки после сборки

@@ -1,0 +1,9 @@
+-- Using cached boostorg-optional-boost-1.80.0.tar.gz
+-- Cleaning sources at C:/Users/bugr2/source/repos/Diplom_CPP/vcpkg_installed/vcpkg/blds/boost-optional/src/ost-1.80.0-f0cff91f5a.clean. Use --editable to skip cleaning for the packages you specify.
+-- Extracting source C:/Users/bugr2/AppData/Local/vcpkg/downloads/boostorg-optional-boost-1.80.0.tar.gz
+-- Using source at C:/Users/bugr2/source/repos/Diplom_CPP/vcpkg_installed/vcpkg/blds/boost-optional/src/ost-1.80.0-f0cff91f5a.clean
+-- Copying headers
+-- Copying headers done
+-- Installing: C:/Users/bugr2/source/repos/Diplom_CPP/vcpkg_installed/vcpkg/pkgs/boost-optional_x64-windows/share/boost-optional/usage
+-- Installing: C:/Users/bugr2/source/repos/Diplom_CPP/vcpkg_installed/vcpkg/pkgs/boost-optional_x64-windows/share/boost-optional/copyright
+-- Выполнение проверки после сборки
