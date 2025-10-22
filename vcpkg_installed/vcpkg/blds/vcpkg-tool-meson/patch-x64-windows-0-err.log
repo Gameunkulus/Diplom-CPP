@@ -1,0 +1,3 @@
+Checking patch tools/meson/mesonbuild/dependencies/misc.py...
+Hunk #1 succeeded at 693 (offset 83 lines).
+Applied patch tools/meson/mesonbuild/dependencies/misc.py cleanly.

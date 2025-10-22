@@ -1,0 +1,27 @@
+-- Using cached postgresql-16.0.tar.bz2
+-- Cleaning sources at C:/Users/bugr2/source/repos/Diplom-CPP/vcpkg_installed/vcpkg/blds/libpq/src/tgresql-16-45acd359f3.clean. Use --editable to skip cleaning for the packages you specify.
+-- Extracting source C:/Users/bugr2/AppData/Local/vcpkg/downloads/postgresql-16.0.tar.bz2
+-- Applying patch unix/installdirs.patch
+-- Applying patch unix/fix-configure.patch
+-- Applying patch unix/single-linkage.patch
+-- Applying patch unix/no-server-tools.patch
+-- Applying patch unix/mingw-install.patch
+-- Applying patch unix/python.patch
+-- Applying patch windows/macro-def.patch
+-- Applying patch windows/python_lib.patch
+-- Applying patch windows/win_bison_flex.patch
+-- Applying patch windows/msbuild.patch
+-- Applying patch windows/spin_delay.patch
+-- Using source at C:/Users/bugr2/source/repos/Diplom-CPP/vcpkg_installed/vcpkg/blds/libpq/src/tgresql-16-45acd359f3.clean
+-- Found external ninja('1.12.1').
+-- Getting CMake variables for x64-windows
+-- Building x64-windows-dbg
+-- Installing x64-windows-dbg
+-- Building x64-windows-rel
+-- Installing x64-windows-rel
+-- Using cached msys2-mingw-w64-x86_64-pkgconf-1~2.3.0-1-any.pkg.tar.zst
+-- Using cached msys2-msys2-runtime-3.5.4-2-x86_64.pkg.tar.zst
+-- Using msys root at C:/Users/bugr2/AppData/Local/vcpkg/downloads/tools/msys2/21caed2f81ec917b
+-- Installing: C:/Users/bugr2/source/repos/Diplom-CPP/vcpkg_installed/vcpkg/pkgs/libpq_x64-windows/share/libpq/usage
+-- Installing: C:/Users/bugr2/source/repos/Diplom-CPP/vcpkg_installed/vcpkg/pkgs/libpq_x64-windows/share/libpq/copyright
+-- Выполнение проверки после сборки

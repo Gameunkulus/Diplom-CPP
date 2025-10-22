@@ -1,0 +1,4 @@
+Checking patch src/Makefile.shlib...
+Hunk #2 succeeded at 433 (offset -39 lines).
+Hunk #3 succeeded at 444 (offset -39 lines).
+Applied patch src/Makefile.shlib cleanly.

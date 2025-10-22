@@ -209,3 +209,99 @@ Abi: 4b3b0e19bf11680c20c7777c08baabd7ff1656eecf076e7a42c598a395c621e0
 Description: Boost winapi module
 Status: install ok installed
 
+Package: zlib
+Version: 1.3
+Depends: vcpkg-cmake
+Architecture: x64-windows
+Multi-Arch: same
+Abi: b8c11955fe1246ee0cfd4b4092e514393e31f12b8a2426116a638dae769944f8
+Description: A compression library
+Status: install ok installed
+
+Package: vcpkg-cmake-get-vars
+Version: 2023-03-02
+Depends: vcpkg-cmake
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 0b176b09b7243a776ed5e887f61b4a7dd2e830918730705f14653f675e026fbf
+Status: install ok installed
+
+Package: openssl
+Version: 3.1.3
+Depends: vcpkg-cmake, vcpkg-cmake-config, vcpkg-cmake-get-vars
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 4e72095ad21f0ae843c66666c83e14815394974ad69d256d2bda049c72c41552
+Description: OpenSSL is an open source project that provides a robust, commercial-grade, and full-featured toolkit for the Transport Layer Security (TLS) and Secure Sockets Layer (SSL) protocols. It is also a general-purpose cryptography library.
+Status: install ok installed
+
+Package: lz4
+Version: 1.9.4
+Port-Version: 1
+Depends: vcpkg-cmake, vcpkg-cmake-config
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 607b508267b2a1520e363870cfc492748884bde2b10deb93a15029e2736816bf
+Description: Lossless compression algorithm, providing compression speed at 400 MB/s per core.
+Status: install ok installed
+
+Package: vcpkg-tool-meson
+Version: 0.63
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 0364d4dbec8e756f5eea1a785c30ef3b2f17d66a1b8bb047c7a8d9d081a45db4
+Description: Meson build system
+Status: install ok installed
+
+Package: pkgconf
+Version: 1.8.0
+Port-Version: 5
+Depends: vcpkg-tool-meson
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 27eafdceef94bf3b53ce03064fed7cce2d61cfa8329164f7d4b4bfe2c882acdb
+Description: pkgconf is a program which helps to configure compiler and linker flags for development libraries. It is similar to pkg-config from freedesktop.org.
+Status: install ok installed
+
+Package: vcpkg-pkgconfig-get-modules
+Version: 2023-09-06
+Depends: pkgconf
+Architecture: x64-windows
+Multi-Arch: same
+Abi: a24a703a837cfe093b0f4573f97467fee48165aa818170415d49bfefdf3987bb
+Status: install ok installed
+
+Package: libpq
+Version: 16.0
+Depends: vcpkg-cmake-get-vars, vcpkg-pkgconfig-get-modules
+Architecture: x64-windows
+Multi-Arch: same
+Abi: d8c0785bdb2676d68af7196a9faa70ef9b343e994cb21ba86488984ac1e79459
+Description: The official database access API of postgresql
+Default-Features: lz4, openssl, zlib
+Status: install ok installed
+
+Package: libpq
+Feature: lz4
+Depends: lz4
+Architecture: x64-windows
+Multi-Arch: same
+Description: Use lz4
+Status: install ok installed
+
+Package: libpq
+Feature: openssl
+Depends: openssl
+Architecture: x64-windows
+Multi-Arch: same
+Description: support for encrypted client connections and random number generation on platforms that do not have "/dev/urandom" (except windows)
+Status: install ok installed
+
+Package: libpq
+Feature: zlib
+Depends: zlib
+Architecture: x64-windows
+Multi-Arch: same
+Description: Use zlib
+Status: install ok installed
+

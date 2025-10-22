@@ -30,7 +30,7 @@ int main(int argc, char* argv[])
 
 	try
 	{
-		ini_parser ini_file("C:/repos/Diplom/config.ini");
+		ini_parser ini_file("C:\Users\bugr2\source\repos\Diplom-CPP\config.ini");
 
 		std::string initialize_connection_db("host=" + ini_file.get_value("DataBase.bd_host") +
 			" port=" + ini_file.get_value("DataBase.bd_port") +

@@ -1,0 +1,3 @@
+Checking patch src/include/storage/s_lock.h...
+Hunk #1 succeeded at 710 (offset -243 lines).
+Applied patch src/include/storage/s_lock.h cleanly.

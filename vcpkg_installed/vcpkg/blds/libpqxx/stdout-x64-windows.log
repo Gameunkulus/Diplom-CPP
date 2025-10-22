@@ -1,0 +1,22 @@
+-- Using cached jtv-libpqxx-7.8.1.tar.gz
+-- Cleaning sources at C:/Users/bugr2/source/repos/Diplom-CPP/vcpkg_installed/vcpkg/blds/libpqxx/src/7.8.1-97e2af3d36.clean. Use --editable to skip cleaning for the packages you specify.
+-- Extracting source C:/Users/bugr2/AppData/Local/vcpkg/downloads/jtv-libpqxx-7.8.1.tar.gz
+-- Applying patch fix_build_with_vs2017.patch
+-- Using source at C:/Users/bugr2/source/repos/Diplom-CPP/vcpkg_installed/vcpkg/blds/libpqxx/src/7.8.1-97e2af3d36.clean
+-- Found external ninja('1.12.1').
+-- Configuring x64-windows
+CMake Error at scripts/cmake/vcpkg_execute_required_process.cmake:127 (message):
+    Command failed: "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v
+    Working Directory: C:/Users/bugr2/source/repos/Diplom-CPP/vcpkg_installed/vcpkg/blds/libpqxx/x64-windows-rel/vcpkg-parallel-configure
+    Error code: 1
+    See logs for more information:
+      C:\Users\bugr2\source\repos\Diplom-CPP\vcpkg_installed\vcpkg\blds\libpqxx\config-x64-windows-dbg-CMakeCache.txt.log
+      C:\Users\bugr2\source\repos\Diplom-CPP\vcpkg_installed\vcpkg\blds\libpqxx\config-x64-windows-rel-CMakeCache.txt.log
+      C:\Users\bugr2\source\repos\Diplom-CPP\vcpkg_installed\vcpkg\blds\libpqxx\config-x64-windows-out.log
+
+Call Stack (most recent call first):
+  C:/Users/bugr2/source/repos/Diplom-CPP/vcpkg_installed/x64-windows/share/vcpkg-cmake/vcpkg_cmake_configure.cmake:252 (vcpkg_execute_required_process)
+  C:/Users/bugr2/AppData/Local/vcpkg/registries/git-trees/8083e94ed4ded4546cbad5263a7efb4b9b154b73/portfile.cmake:14 (vcpkg_cmake_configure)
+  scripts/ports.cmake:203 (include)
+
+

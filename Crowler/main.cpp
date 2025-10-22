@@ -5,7 +5,7 @@
 #include <queue>
 #include <condition_variable>
 
-#include "http_ustils.h"
+#include "http_utils.h"
 #include <functional>
 
 #include "../Ini/ini_file.h"
@@ -262,7 +262,7 @@ int main()
 {
 	setlocale(LC_ALL, "ru_RU.utf-8");
 	try {
-		ini_parser ini_file("C:/repos/Diplom/config.ini");
+		ini_parser ini_file("C:\Users\bugr2\source\repos\Diplom-CPP\config.ini");
 
 		std::string start_page = ini_file.get_value("Client.start_page");
 		int recursion_depth = std::stoi(ini_file.get_value("Client.recursion_depth"));

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition="'$(Configuration)'=='Debug'">
+    <VcpkgIcuLibs>C:/Users/bugr2/source/repos/Diplom-CPP/vcpkg_installed/x64-windows/debug/lib/icuind.lib;C:/Users/bugr2/source/repos/Diplom-CPP/vcpkg_installed/x64-windows/debug/lib/icuucd.lib;C:/Users/bugr2/source/repos/Diplom-CPP/vcpkg_installed/x64-windows/debug/lib/icudtd.lib;</VcpkgIcuLibs>
+    <VcpkgLz4Libs>C:/Users/bugr2/source/repos/Diplom-CPP/vcpkg_installed/x64-windows/debug/lib/lz4d.lib</VcpkgLz4Libs>
+    <VcpkgNlsLibs>C:/Users/bugr2/source/repos/Diplom-CPP/vcpkg_installed/x64-windows/debug/lib/intl.lib;C:/Users/bugr2/source/repos/Diplom-CPP/vcpkg_installed/x64-windows/debug/lib/iconv.lib;C:/Users/bugr2/source/repos/Diplom-CPP/vcpkg_installed/x64-windows/debug/lib/charset.lib</VcpkgNlsLibs>
+    <VcpkgOpensslLibs>C:/Users/bugr2/source/repos/Diplom-CPP/vcpkg_installed/x64-windows/debug/lib/libssl.lib;C:/Users/bugr2/source/repos/Diplom-CPP/vcpkg_installed/x64-windows/debug/lib/libcrypto.lib;crypt32.lib;ws2_32.lib;secur32.lib</VcpkgOpensslLibs>
+    <VcpkgPythonLibs>C:/Users/bugr2/source/repos/Diplom-CPP/vcpkg_installed/x64-windows/debug/lib/python3_d.lib</VcpkgPythonLibs>
+    <VcpkgTcl90Libs>C:/Users/bugr2/source/repos/Diplom-CPP/vcpkg_installed/x64-windows/debug/lib/tcl90g.lib</VcpkgTcl90Libs>
+    <VcpkgTcl90sLibs>C:/Users/bugr2/source/repos/Diplom-CPP/vcpkg_installed/x64-windows/debug/lib/tcl90sg.lib</VcpkgTcl90sLibs>
+    <VcpkgTcl90sxLibs>C:/Users/bugr2/source/repos/Diplom-CPP/vcpkg_installed/x64-windows/debug/lib/tcl90sgx.lib</VcpkgTcl90sxLibs>
+    <VcpkgXmlLibs></VcpkgXmlLibs>
+    <VcpkgXsltLibs></VcpkgXsltLibs>
+    <VcpkgZlibLibs>C:/Users/bugr2/source/repos/Diplom-CPP/vcpkg_installed/x64-windows/debug/lib/zlibd.lib</VcpkgZlibLibs>
+    <VcpkgZstdLibs>C:/Users/bugr2/source/repos/Diplom-CPP/vcpkg_installed/x64-windows/debug/lib/zstd.lib</VcpkgZstdLibs>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)'=='Release'">
+    <VcpkgIcuLibs>C:/Users/bugr2/source/repos/Diplom-CPP/vcpkg_installed/x64-windows/lib/icuin.lib;C:/Users/bugr2/source/repos/Diplom-CPP/vcpkg_installed/x64-windows/lib/icuuc.lib;C:/Users/bugr2/source/repos/Diplom-CPP/vcpkg_installed/x64-windows/lib/icudt.lib;</VcpkgIcuLibs>
+    <VcpkgLz4Libs>C:/Users/bugr2/source/repos/Diplom-CPP/vcpkg_installed/x64-windows/lib/lz4.lib</VcpkgLz4Libs>
+    <VcpkgNlsLibs>C:/Users/bugr2/source/repos/Diplom-CPP/vcpkg_installed/x64-windows/lib/intl.lib;C:/Users/bugr2/source/repos/Diplom-CPP/vcpkg_installed/x64-windows/lib/iconv.lib;C:/Users/bugr2/source/repos/Diplom-CPP/vcpkg_installed/x64-windows/lib/charset.lib</VcpkgNlsLibs>
+    <VcpkgOpensslLibs>C:/Users/bugr2/source/repos/Diplom-CPP/vcpkg_installed/x64-windows/lib/libssl.lib;C:/Users/bugr2/source/repos/Diplom-CPP/vcpkg_installed/x64-windows/lib/libcrypto.lib;crypt32.lib;ws2_32.lib;secur32.lib</VcpkgOpensslLibs>
+    <VcpkgPythonLibs>C:/Users/bugr2/source/repos/Diplom-CPP/vcpkg_installed/x64-windows/lib/python3.lib</VcpkgPythonLibs>
+    <VcpkgTcl90Libs>C:/Users/bugr2/source/repos/Diplom-CPP/vcpkg_installed/x64-windows/lib/tcl90.lib</VcpkgTcl90Libs>
+    <VcpkgTcl90sLibs>C:/Users/bugr2/source/repos/Diplom-CPP/vcpkg_installed/x64-windows/lib/tcl90s.lib</VcpkgTcl90sLibs>
+    <VcpkgTcl90sxLibs>C:/Users/bugr2/source/repos/Diplom-CPP/vcpkg_installed/x64-windows/lib/tcl90sx.lib</VcpkgTcl90sxLibs>
+    <VcpkgXmlLibs></VcpkgXmlLibs>
+    <VcpkgXsltLibs></VcpkgXsltLibs>
+    <VcpkgZlibLibs>C:/Users/bugr2/source/repos/Diplom-CPP/vcpkg_installed/x64-windows/lib/zlib.lib</VcpkgZlibLibs>
+    <VcpkgZstdLibs>C:/Users/bugr2/source/repos/Diplom-CPP/vcpkg_installed/x64-windows/lib/zstd.lib</VcpkgZstdLibs>
+  </PropertyGroup>
+</Project>

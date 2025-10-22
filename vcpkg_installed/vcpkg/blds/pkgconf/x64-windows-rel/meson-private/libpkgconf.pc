@@ -1,0 +1,10 @@
+prefix=C:/Users/bugr2/source/repos/Diplom-CPP/vcpkg_installed/vcpkg/pkgs/pkgconf_x64-windows
+includedir=${prefix}/include
+libdir=${prefix}/lib
+
+Name: libpkgconf
+Description: a library for accessing and manipulating development framework configuration
+URL: http://github.com/pkgconf/pkgconf
+Version: 1.8.0
+Libs: -L${libdir} -lpkgconf
+Cflags: -I${includedir}/pkgconf -DPKGCONFIG_IS_NOT_STATIC

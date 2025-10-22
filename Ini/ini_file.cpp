@@ -8,13 +8,7 @@
 ini_file::ini_file(const std::string& file_name)
 {
 	file_.open(file_name);
-	if (!file_.is_open())
-	{
-		throw std::ios_base::failure("Ini file not open");
-	}
-	else {
 		read_file_();
-	}
 }
 
 ini_file::~ini_file()
@@ -49,7 +43,7 @@ void ini_file::read_file_()
 				file_.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 				file_.unget();
 			}
-			else if (next_read_not_error)
+			else
 			{
 				if (word_from_ini.at(0) == '[')
 				{
@@ -60,9 +54,6 @@ void ini_file::read_file_()
 					get_value_(word_from_ini);
 					next_read_not_error = false;
 				}
-			}
-			else {
-				throw ini_file_exeption(current_read_line_, "Format file error!");
 			}
 			ignore_space_to_word();
 		} while (file_.peek() != '\n' && !file_.eof());

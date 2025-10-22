@@ -1,0 +1,104 @@
+[
+  {
+    "directory": "C:\\Users\\bugr2\\source\\repos\\Diplom-CPP\\vcpkg_installed\\vcpkg\\blds\\pkgconf\\x64-windows-dbg",
+    "command": "\"C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/cl.exe\" \"-DWIN32\" \"-D_WINDOWS\" \"-utf-8\" \"-MP\" \"-MDd\" \"-Z7\" \"-Ob0\" \"-Od\" \"-RTC1\" \"-Ipkgconf-3.dll.p\" \"-I.\" \"-I..\\src\\6aa314c9c4-8bd74a463d.clean\" \"-IC:/Users/bugr2/source/repos/Diplom-CPP/vcpkg_installed/x64-windows/include\" \"/MDd\" \"/nologo\" \"/showIncludes\" \"/utf-8\" \"/W2\" \"/Od\" \"/Zi\" \"-nologo\" \"-DWIN32\" \"-D_WINDOWS\" \"-utf-8\" \"-MP\" \"-MDd\" \"-Z7\" \"-Ob0\" \"-Od\" \"-RTC1\" \"-DLIBPKGCONF_EXPORT\" \"-DPKGCONFIG_IS_NOT_STATIC\" \"/Fdpkgconf-3.dll.p\\libpkgconf_argvsplit.c.pdb\" /Fopkgconf-3.dll.p/libpkgconf_argvsplit.c.obj \"/c\" ../src/6aa314c9c4-8bd74a463d.clean/libpkgconf/argvsplit.c",
+    "file": "../src/6aa314c9c4-8bd74a463d.clean/libpkgconf/argvsplit.c",
+    "output": "pkgconf-3.dll.p/libpkgconf_argvsplit.c.obj"
+  },
+  {
+    "directory": "C:\\Users\\bugr2\\source\\repos\\Diplom-CPP\\vcpkg_installed\\vcpkg\\blds\\pkgconf\\x64-windows-dbg",
+    "command": "\"C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/cl.exe\" \"-DWIN32\" \"-D_WINDOWS\" \"-utf-8\" \"-MP\" \"-MDd\" \"-Z7\" \"-Ob0\" \"-Od\" \"-RTC1\" \"-Ipkgconf-3.dll.p\" \"-I.\" \"-I..\\src\\6aa314c9c4-8bd74a463d.clean\" \"-IC:/Users/bugr2/source/repos/Diplom-CPP/vcpkg_installed/x64-windows/include\" \"/MDd\" \"/nologo\" \"/showIncludes\" \"/utf-8\" \"/W2\" \"/Od\" \"/Zi\" \"-nologo\" \"-DWIN32\" \"-D_WINDOWS\" \"-utf-8\" \"-MP\" \"-MDd\" \"-Z7\" \"-Ob0\" \"-Od\" \"-RTC1\" \"-DLIBPKGCONF_EXPORT\" \"-DPKGCONFIG_IS_NOT_STATIC\" \"/Fdpkgconf-3.dll.p\\libpkgconf_audit.c.pdb\" /Fopkgconf-3.dll.p/libpkgconf_audit.c.obj \"/c\" ../src/6aa314c9c4-8bd74a463d.clean/libpkgconf/audit.c",
+    "file": "../src/6aa314c9c4-8bd74a463d.clean/libpkgconf/audit.c",
+    "output": "pkgconf-3.dll.p/libpkgconf_audit.c.obj"
+  },
+  {
+    "directory": "C:\\Users\\bugr2\\source\\repos\\Diplom-CPP\\vcpkg_installed\\vcpkg\\blds\\pkgconf\\x64-windows-dbg",
+    "command": "\"C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/cl.exe\" \"-DWIN32\" \"-D_WINDOWS\" \"-utf-8\" \"-MP\" \"-MDd\" \"-Z7\" \"-Ob0\" \"-Od\" \"-RTC1\" \"-Ipkgconf-3.dll.p\" \"-I.\" \"-I..\\src\\6aa314c9c4-8bd74a463d.clean\" \"-IC:/Users/bugr2/source/repos/Diplom-CPP/vcpkg_installed/x64-windows/include\" \"/MDd\" \"/nologo\" \"/showIncludes\" \"/utf-8\" \"/W2\" \"/Od\" \"/Zi\" \"-nologo\" \"-DWIN32\" \"-D_WINDOWS\" \"-utf-8\" \"-MP\" \"-MDd\" \"-Z7\" \"-Ob0\" \"-Od\" \"-RTC1\" \"-DLIBPKGCONF_EXPORT\" \"-DPKGCONFIG_IS_NOT_STATIC\" \"/Fdpkgconf-3.dll.p\\libpkgconf_bsdstubs.c.pdb\" /Fopkgconf-3.dll.p/libpkgconf_bsdstubs.c.obj \"/c\" ../src/6aa314c9c4-8bd74a463d.clean/libpkgconf/bsdstubs.c",
+    "file": "../src/6aa314c9c4-8bd74a463d.clean/libpkgconf/bsdstubs.c",
+    "output": "pkgconf-3.dll.p/libpkgconf_bsdstubs.c.obj"
+  },
+  {
+    "directory": "C:\\Users\\bugr2\\source\\repos\\Diplom-CPP\\vcpkg_installed\\vcpkg\\blds\\pkgconf\\x64-windows-dbg",
+    "command": "\"C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/cl.exe\" \"-DWIN32\" \"-D_WINDOWS\" \"-utf-8\" \"-MP\" \"-MDd\" \"-Z7\" \"-Ob0\" \"-Od\" \"-RTC1\" \"-Ipkgconf-3.dll.p\" \"-I.\" \"-I..\\src\\6aa314c9c4-8bd74a463d.clean\" \"-IC:/Users/bugr2/source/repos/Diplom-CPP/vcpkg_installed/x64-windows/include\" \"/MDd\" \"/nologo\" \"/showIncludes\" \"/utf-8\" \"/W2\" \"/Od\" \"/Zi\" \"-nologo\" \"-DWIN32\" \"-D_WINDOWS\" \"-utf-8\" \"-MP\" \"-MDd\" \"-Z7\" \"-Ob0\" \"-Od\" \"-RTC1\" \"-DLIBPKGCONF_EXPORT\" \"-DPKGCONFIG_IS_NOT_STATIC\" \"/Fdpkgconf-3.dll.p\\libpkgconf_cache.c.pdb\" /Fopkgconf-3.dll.p/libpkgconf_cache.c.obj \"/c\" ../src/6aa314c9c4-8bd74a463d.clean/libpkgconf/cache.c",
+    "file": "../src/6aa314c9c4-8bd74a463d.clean/libpkgconf/cache.c",
+    "output": "pkgconf-3.dll.p/libpkgconf_cache.c.obj"
+  },
+  {
+    "directory": "C:\\Users\\bugr2\\source\\repos\\Diplom-CPP\\vcpkg_installed\\vcpkg\\blds\\pkgconf\\x64-windows-dbg",
+    "command": "\"C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/cl.exe\" \"-DWIN32\" \"-D_WINDOWS\" \"-utf-8\" \"-MP\" \"-MDd\" \"-Z7\" \"-Ob0\" \"-Od\" \"-RTC1\" \"-Ipkgconf-3.dll.p\" \"-I.\" \"-I..\\src\\6aa314c9c4-8bd74a463d.clean\" \"-IC:/Users/bugr2/source/repos/Diplom-CPP/vcpkg_installed/x64-windows/include\" \"/MDd\" \"/nologo\" \"/showIncludes\" \"/utf-8\" \"/W2\" \"/Od\" \"/Zi\" \"-nologo\" \"-DWIN32\" \"-D_WINDOWS\" \"-utf-8\" \"-MP\" \"-MDd\" \"-Z7\" \"-Ob0\" \"-Od\" \"-RTC1\" \"-DLIBPKGCONF_EXPORT\" \"-DPKGCONFIG_IS_NOT_STATIC\" \"/Fdpkgconf-3.dll.p\\libpkgconf_client.c.pdb\" /Fopkgconf-3.dll.p/libpkgconf_client.c.obj \"/c\" ../src/6aa314c9c4-8bd74a463d.clean/libpkgconf/client.c",
+    "file": "../src/6aa314c9c4-8bd74a463d.clean/libpkgconf/client.c",
+    "output": "pkgconf-3.dll.p/libpkgconf_client.c.obj"
+  },
+  {
+    "directory": "C:\\Users\\bugr2\\source\\repos\\Diplom-CPP\\vcpkg_installed\\vcpkg\\blds\\pkgconf\\x64-windows-dbg",
+    "command": "\"C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/cl.exe\" \"-DWIN32\" \"-D_WINDOWS\" \"-utf-8\" \"-MP\" \"-MDd\" \"-Z7\" \"-Ob0\" \"-Od\" \"-RTC1\" \"-Ipkgconf-3.dll.p\" \"-I.\" \"-I..\\src\\6aa314c9c4-8bd74a463d.clean\" \"-IC:/Users/bugr2/source/repos/Diplom-CPP/vcpkg_installed/x64-windows/include\" \"/MDd\" \"/nologo\" \"/showIncludes\" \"/utf-8\" \"/W2\" \"/Od\" \"/Zi\" \"-nologo\" \"-DWIN32\" \"-D_WINDOWS\" \"-utf-8\" \"-MP\" \"-MDd\" \"-Z7\" \"-Ob0\" \"-Od\" \"-RTC1\" \"-DLIBPKGCONF_EXPORT\" \"-DPKGCONFIG_IS_NOT_STATIC\" \"/Fdpkgconf-3.dll.p\\libpkgconf_dependency.c.pdb\" /Fopkgconf-3.dll.p/libpkgconf_dependency.c.obj \"/c\" ../src/6aa314c9c4-8bd74a463d.clean/libpkgconf/dependency.c",
+    "file": "../src/6aa314c9c4-8bd74a463d.clean/libpkgconf/dependency.c",
+    "output": "pkgconf-3.dll.p/libpkgconf_dependency.c.obj"
+  },
+  {
+    "directory": "C:\\Users\\bugr2\\source\\repos\\Diplom-CPP\\vcpkg_installed\\vcpkg\\blds\\pkgconf\\x64-windows-dbg",
+    "command": "\"C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/cl.exe\" \"-DWIN32\" \"-D_WINDOWS\" \"-utf-8\" \"-MP\" \"-MDd\" \"-Z7\" \"-Ob0\" \"-Od\" \"-RTC1\" \"-Ipkgconf-3.dll.p\" \"-I.\" \"-I..\\src\\6aa314c9c4-8bd74a463d.clean\" \"-IC:/Users/bugr2/source/repos/Diplom-CPP/vcpkg_installed/x64-windows/include\" \"/MDd\" \"/nologo\" \"/showIncludes\" \"/utf-8\" \"/W2\" \"/Od\" \"/Zi\" \"-nologo\" \"-DWIN32\" \"-D_WINDOWS\" \"-utf-8\" \"-MP\" \"-MDd\" \"-Z7\" \"-Ob0\" \"-Od\" \"-RTC1\" \"-DLIBPKGCONF_EXPORT\" \"-DPKGCONFIG_IS_NOT_STATIC\" \"/Fdpkgconf-3.dll.p\\libpkgconf_fileio.c.pdb\" /Fopkgconf-3.dll.p/libpkgconf_fileio.c.obj \"/c\" ../src/6aa314c9c4-8bd74a463d.clean/libpkgconf/fileio.c",
+    "file": "../src/6aa314c9c4-8bd74a463d.clean/libpkgconf/fileio.c",
+    "output": "pkgconf-3.dll.p/libpkgconf_fileio.c.obj"
+  },
+  {
+    "directory": "C:\\Users\\bugr2\\source\\repos\\Diplom-CPP\\vcpkg_installed\\vcpkg\\blds\\pkgconf\\x64-windows-dbg",
+    "command": "\"C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/cl.exe\" \"-DWIN32\" \"-D_WINDOWS\" \"-utf-8\" \"-MP\" \"-MDd\" \"-Z7\" \"-Ob0\" \"-Od\" \"-RTC1\" \"-Ipkgconf-3.dll.p\" \"-I.\" \"-I..\\src\\6aa314c9c4-8bd74a463d.clean\" \"-IC:/Users/bugr2/source/repos/Diplom-CPP/vcpkg_installed/x64-windows/include\" \"/MDd\" \"/nologo\" \"/showIncludes\" \"/utf-8\" \"/W2\" \"/Od\" \"/Zi\" \"-nologo\" \"-DWIN32\" \"-D_WINDOWS\" \"-utf-8\" \"-MP\" \"-MDd\" \"-Z7\" \"-Ob0\" \"-Od\" \"-RTC1\" \"-DLIBPKGCONF_EXPORT\" \"-DPKGCONFIG_IS_NOT_STATIC\" \"/Fdpkgconf-3.dll.p\\libpkgconf_fragment.c.pdb\" /Fopkgconf-3.dll.p/libpkgconf_fragment.c.obj \"/c\" ../src/6aa314c9c4-8bd74a463d.clean/libpkgconf/fragment.c",
+    "file": "../src/6aa314c9c4-8bd74a463d.clean/libpkgconf/fragment.c",
+    "output": "pkgconf-3.dll.p/libpkgconf_fragment.c.obj"
+  },
+  {
+    "directory": "C:\\Users\\bugr2\\source\\repos\\Diplom-CPP\\vcpkg_installed\\vcpkg\\blds\\pkgconf\\x64-windows-dbg",
+    "command": "\"C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/cl.exe\" \"-DWIN32\" \"-D_WINDOWS\" \"-utf-8\" \"-MP\" \"-MDd\" \"-Z7\" \"-Ob0\" \"-Od\" \"-RTC1\" \"-Ipkgconf-3.dll.p\" \"-I.\" \"-I..\\src\\6aa314c9c4-8bd74a463d.clean\" \"-IC:/Users/bugr2/source/repos/Diplom-CPP/vcpkg_installed/x64-windows/include\" \"/MDd\" \"/nologo\" \"/showIncludes\" \"/utf-8\" \"/W2\" \"/Od\" \"/Zi\" \"-nologo\" \"-DWIN32\" \"-D_WINDOWS\" \"-utf-8\" \"-MP\" \"-MDd\" \"-Z7\" \"-Ob0\" \"-Od\" \"-RTC1\" \"-DLIBPKGCONF_EXPORT\" \"-DPKGCONFIG_IS_NOT_STATIC\" \"/Fdpkgconf-3.dll.p\\libpkgconf_parser.c.pdb\" /Fopkgconf-3.dll.p/libpkgconf_parser.c.obj \"/c\" ../src/6aa314c9c4-8bd74a463d.clean/libpkgconf/parser.c",
+    "file": "../src/6aa314c9c4-8bd74a463d.clean/libpkgconf/parser.c",
+    "output": "pkgconf-3.dll.p/libpkgconf_parser.c.obj"
+  },
+  {
+    "directory": "C:\\Users\\bugr2\\source\\repos\\Diplom-CPP\\vcpkg_installed\\vcpkg\\blds\\pkgconf\\x64-windows-dbg",
+    "command": "\"C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/cl.exe\" \"-DWIN32\" \"-D_WINDOWS\" \"-utf-8\" \"-MP\" \"-MDd\" \"-Z7\" \"-Ob0\" \"-Od\" \"-RTC1\" \"-Ipkgconf-3.dll.p\" \"-I.\" \"-I..\\src\\6aa314c9c4-8bd74a463d.clean\" \"-IC:/Users/bugr2/source/repos/Diplom-CPP/vcpkg_installed/x64-windows/include\" \"/MDd\" \"/nologo\" \"/showIncludes\" \"/utf-8\" \"/W2\" \"/Od\" \"/Zi\" \"-nologo\" \"-DWIN32\" \"-D_WINDOWS\" \"-utf-8\" \"-MP\" \"-MDd\" \"-Z7\" \"-Ob0\" \"-Od\" \"-RTC1\" \"-DLIBPKGCONF_EXPORT\" \"-DPKGCONFIG_IS_NOT_STATIC\" \"/Fdpkgconf-3.dll.p\\libpkgconf_path.c.pdb\" /Fopkgconf-3.dll.p/libpkgconf_path.c.obj \"/c\" ../src/6aa314c9c4-8bd74a463d.clean/libpkgconf/path.c",
+    "file": "../src/6aa314c9c4-8bd74a463d.clean/libpkgconf/path.c",
+    "output": "pkgconf-3.dll.p/libpkgconf_path.c.obj"
+  },
+  {
+    "directory": "C:\\Users\\bugr2\\source\\repos\\Diplom-CPP\\vcpkg_installed\\vcpkg\\blds\\pkgconf\\x64-windows-dbg",
+    "command": "\"C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/cl.exe\" \"-DWIN32\" \"-D_WINDOWS\" \"-utf-8\" \"-MP\" \"-MDd\" \"-Z7\" \"-Ob0\" \"-Od\" \"-RTC1\" \"-Ipkgconf-3.dll.p\" \"-I.\" \"-I..\\src\\6aa314c9c4-8bd74a463d.clean\" \"-IC:/Users/bugr2/source/repos/Diplom-CPP/vcpkg_installed/x64-windows/include\" \"/MDd\" \"/nologo\" \"/showIncludes\" \"/utf-8\" \"/W2\" \"/Od\" \"/Zi\" \"-nologo\" \"-DWIN32\" \"-D_WINDOWS\" \"-utf-8\" \"-MP\" \"-MDd\" \"-Z7\" \"-Ob0\" \"-Od\" \"-RTC1\" \"-DLIBPKGCONF_EXPORT\" \"-DPKGCONFIG_IS_NOT_STATIC\" \"/Fdpkgconf-3.dll.p\\libpkgconf_personality.c.pdb\" /Fopkgconf-3.dll.p/libpkgconf_personality.c.obj \"/c\" ../src/6aa314c9c4-8bd74a463d.clean/libpkgconf/personality.c",
+    "file": "../src/6aa314c9c4-8bd74a463d.clean/libpkgconf/personality.c",
+    "output": "pkgconf-3.dll.p/libpkgconf_personality.c.obj"
+  },
+  {
+    "directory": "C:\\Users\\bugr2\\source\\repos\\Diplom-CPP\\vcpkg_installed\\vcpkg\\blds\\pkgconf\\x64-windows-dbg",
+    "command": "\"C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/cl.exe\" \"-DWIN32\" \"-D_WINDOWS\" \"-utf-8\" \"-MP\" \"-MDd\" \"-Z7\" \"-Ob0\" \"-Od\" \"-RTC1\" \"-Ipkgconf-3.dll.p\" \"-I.\" \"-I..\\src\\6aa314c9c4-8bd74a463d.clean\" \"-IC:/Users/bugr2/source/repos/Diplom-CPP/vcpkg_installed/x64-windows/include\" \"/MDd\" \"/nologo\" \"/showIncludes\" \"/utf-8\" \"/W2\" \"/Od\" \"/Zi\" \"-nologo\" \"-DWIN32\" \"-D_WINDOWS\" \"-utf-8\" \"-MP\" \"-MDd\" \"-Z7\" \"-Ob0\" \"-Od\" \"-RTC1\" \"-DLIBPKGCONF_EXPORT\" \"-DPKGCONFIG_IS_NOT_STATIC\" \"/Fdpkgconf-3.dll.p\\libpkgconf_pkg.c.pdb\" /Fopkgconf-3.dll.p/libpkgconf_pkg.c.obj \"/c\" ../src/6aa314c9c4-8bd74a463d.clean/libpkgconf/pkg.c",
+    "file": "../src/6aa314c9c4-8bd74a463d.clean/libpkgconf/pkg.c",
+    "output": "pkgconf-3.dll.p/libpkgconf_pkg.c.obj"
+  },
+  {
+    "directory": "C:\\Users\\bugr2\\source\\repos\\Diplom-CPP\\vcpkg_installed\\vcpkg\\blds\\pkgconf\\x64-windows-dbg",
+    "command": "\"C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/cl.exe\" \"-DWIN32\" \"-D_WINDOWS\" \"-utf-8\" \"-MP\" \"-MDd\" \"-Z7\" \"-Ob0\" \"-Od\" \"-RTC1\" \"-Ipkgconf-3.dll.p\" \"-I.\" \"-I..\\src\\6aa314c9c4-8bd74a463d.clean\" \"-IC:/Users/bugr2/source/repos/Diplom-CPP/vcpkg_installed/x64-windows/include\" \"/MDd\" \"/nologo\" \"/showIncludes\" \"/utf-8\" \"/W2\" \"/Od\" \"/Zi\" \"-nologo\" \"-DWIN32\" \"-D_WINDOWS\" \"-utf-8\" \"-MP\" \"-MDd\" \"-Z7\" \"-Ob0\" \"-Od\" \"-RTC1\" \"-DLIBPKGCONF_EXPORT\" \"-DPKGCONFIG_IS_NOT_STATIC\" \"/Fdpkgconf-3.dll.p\\libpkgconf_queue.c.pdb\" /Fopkgconf-3.dll.p/libpkgconf_queue.c.obj \"/c\" ../src/6aa314c9c4-8bd74a463d.clean/libpkgconf/queue.c",
+    "file": "../src/6aa314c9c4-8bd74a463d.clean/libpkgconf/queue.c",
+    "output": "pkgconf-3.dll.p/libpkgconf_queue.c.obj"
+  },
+  {
+    "directory": "C:\\Users\\bugr2\\source\\repos\\Diplom-CPP\\vcpkg_installed\\vcpkg\\blds\\pkgconf\\x64-windows-dbg",
+    "command": "\"C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/cl.exe\" \"-DWIN32\" \"-D_WINDOWS\" \"-utf-8\" \"-MP\" \"-MDd\" \"-Z7\" \"-Ob0\" \"-Od\" \"-RTC1\" \"-Ipkgconf-3.dll.p\" \"-I.\" \"-I..\\src\\6aa314c9c4-8bd74a463d.clean\" \"-IC:/Users/bugr2/source/repos/Diplom-CPP/vcpkg_installed/x64-windows/include\" \"/MDd\" \"/nologo\" \"/showIncludes\" \"/utf-8\" \"/W2\" \"/Od\" \"/Zi\" \"-nologo\" \"-DWIN32\" \"-D_WINDOWS\" \"-utf-8\" \"-MP\" \"-MDd\" \"-Z7\" \"-Ob0\" \"-Od\" \"-RTC1\" \"-DLIBPKGCONF_EXPORT\" \"-DPKGCONFIG_IS_NOT_STATIC\" \"/Fdpkgconf-3.dll.p\\libpkgconf_tuple.c.pdb\" /Fopkgconf-3.dll.p/libpkgconf_tuple.c.obj \"/c\" ../src/6aa314c9c4-8bd74a463d.clean/libpkgconf/tuple.c",
+    "file": "../src/6aa314c9c4-8bd74a463d.clean/libpkgconf/tuple.c",
+    "output": "pkgconf-3.dll.p/libpkgconf_tuple.c.obj"
+  },
+  {
+    "directory": "C:\\Users\\bugr2\\source\\repos\\Diplom-CPP\\vcpkg_installed\\vcpkg\\blds\\pkgconf\\x64-windows-dbg",
+    "command": "\"C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/cl.exe\" \"-DWIN32\" \"-D_WINDOWS\" \"-utf-8\" \"-MP\" \"-MDd\" \"-Z7\" \"-Ob0\" \"-Od\" \"-RTC1\" \"-Ipkgconf.exe.p\" \"-I.\" \"-I..\\src\\6aa314c9c4-8bd74a463d.clean\" \"-IC:/Users/bugr2/source/repos/Diplom-CPP/vcpkg_installed/x64-windows/include\" \"/MDd\" \"/nologo\" \"/showIncludes\" \"/utf-8\" \"/W2\" \"/Od\" \"/Zi\" \"-nologo\" \"-DWIN32\" \"-D_WINDOWS\" \"-utf-8\" \"-MP\" \"-MDd\" \"-Z7\" \"-Ob0\" \"-Od\" \"-RTC1\" \"-DPKGCONFIG_IS_NOT_STATIC\" \"/Fdpkgconf.exe.p\\cli_main.c.pdb\" /Fopkgconf.exe.p/cli_main.c.obj \"/c\" ../src/6aa314c9c4-8bd74a463d.clean/cli/main.c",
+    "file": "../src/6aa314c9c4-8bd74a463d.clean/cli/main.c",
+    "output": "pkgconf.exe.p/cli_main.c.obj"
+  },
+  {
+    "directory": "C:\\Users\\bugr2\\source\\repos\\Diplom-CPP\\vcpkg_installed\\vcpkg\\blds\\pkgconf\\x64-windows-dbg",
+    "command": "\"C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/cl.exe\" \"-DWIN32\" \"-D_WINDOWS\" \"-utf-8\" \"-MP\" \"-MDd\" \"-Z7\" \"-Ob0\" \"-Od\" \"-RTC1\" \"-Ipkgconf.exe.p\" \"-I.\" \"-I..\\src\\6aa314c9c4-8bd74a463d.clean\" \"-IC:/Users/bugr2/source/repos/Diplom-CPP/vcpkg_installed/x64-windows/include\" \"/MDd\" \"/nologo\" \"/showIncludes\" \"/utf-8\" \"/W2\" \"/Od\" \"/Zi\" \"-nologo\" \"-DWIN32\" \"-D_WINDOWS\" \"-utf-8\" \"-MP\" \"-MDd\" \"-Z7\" \"-Ob0\" \"-Od\" \"-RTC1\" \"-DPKGCONFIG_IS_NOT_STATIC\" \"/Fdpkgconf.exe.p\\cli_getopt_long.c.pdb\" /Fopkgconf.exe.p/cli_getopt_long.c.obj \"/c\" ../src/6aa314c9c4-8bd74a463d.clean/cli/getopt_long.c",
+    "file": "../src/6aa314c9c4-8bd74a463d.clean/cli/getopt_long.c",
+    "output": "pkgconf.exe.p/cli_getopt_long.c.obj"
+  },
+  {
+    "directory": "C:\\Users\\bugr2\\source\\repos\\Diplom-CPP\\vcpkg_installed\\vcpkg\\blds\\pkgconf\\x64-windows-dbg",
+    "command": "\"C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/cl.exe\" \"-DWIN32\" \"-D_WINDOWS\" \"-utf-8\" \"-MP\" \"-MDd\" \"-Z7\" \"-Ob0\" \"-Od\" \"-RTC1\" \"-Ipkgconf.exe.p\" \"-I.\" \"-I..\\src\\6aa314c9c4-8bd74a463d.clean\" \"-IC:/Users/bugr2/source/repos/Diplom-CPP/vcpkg_installed/x64-windows/include\" \"/MDd\" \"/nologo\" \"/showIncludes\" \"/utf-8\" \"/W2\" \"/Od\" \"/Zi\" \"-nologo\" \"-DWIN32\" \"-D_WINDOWS\" \"-utf-8\" \"-MP\" \"-MDd\" \"-Z7\" \"-Ob0\" \"-Od\" \"-RTC1\" \"-DPKGCONFIG_IS_NOT_STATIC\" \"/Fdpkgconf.exe.p\\cli_renderer-msvc.c.pdb\" /Fopkgconf.exe.p/cli_renderer-msvc.c.obj \"/c\" ../src/6aa314c9c4-8bd74a463d.clean/cli/renderer-msvc.c",
+    "file": "../src/6aa314c9c4-8bd74a463d.clean/cli/renderer-msvc.c",
+    "output": "pkgconf.exe.p/cli_renderer-msvc.c.obj"
+  }
+]
