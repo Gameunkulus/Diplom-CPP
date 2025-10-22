@@ -5,7 +5,7 @@
         "cxxopts",
         "fmt",
         "range-v3",
-        "pkgconf"
+        "pkg-config"
     ],
     "overrides": [
         {
