@@ -1,5 +1,0 @@
-C:/Users/bugr2/source/repos/Diplom_CPP/vcpkg_installed/vcpkg/blds/boost-cmake/x64-windows-dbg/CMakeFiles/edit_cache.dir
-C:/Users/bugr2/source/repos/Diplom_CPP/vcpkg_installed/vcpkg/blds/boost-cmake/x64-windows-dbg/CMakeFiles/rebuild_cache.dir
-C:/Users/bugr2/source/repos/Diplom_CPP/vcpkg_installed/vcpkg/blds/boost-cmake/x64-windows-dbg/CMakeFiles/list_install_components.dir
-C:/Users/bugr2/source/repos/Diplom_CPP/vcpkg_installed/vcpkg/blds/boost-cmake/x64-windows-dbg/CMakeFiles/install.dir
-C:/Users/bugr2/source/repos/Diplom_CPP/vcpkg_installed/vcpkg/blds/boost-cmake/x64-windows-dbg/CMakeFiles/install/local.dir

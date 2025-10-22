@@ -1,9 +1,0 @@
-Downloading https://github.com/boostorg/static_assert/archive/boost-1.80.0.tar.gz -> boostorg-static_assert-boost-1.80.0.tar.gz
-Successfully downloaded boostorg-static_assert-boost-1.80.0.tar.gz
--- Extracting source C:/Users/bugr2/AppData/Local/vcpkg/downloads/boostorg-static_assert-boost-1.80.0.tar.gz
--- Using source at C:/Users/bugr2/source/repos/Diplom_CPP/vcpkg_installed/vcpkg/blds/boost-static-assert/src/ost-1.80.0-36b451fec5.clean
--- Copying headers
--- Copying headers done
--- Installing: C:/Users/bugr2/source/repos/Diplom_CPP/vcpkg_installed/vcpkg/pkgs/boost-static-assert_x64-windows/share/boost-static-assert/usage
--- Installing: C:/Users/bugr2/source/repos/Diplom_CPP/vcpkg_installed/vcpkg/pkgs/boost-static-assert_x64-windows/share/boost-static-assert/copyright
--- Выполнение проверки после сборки

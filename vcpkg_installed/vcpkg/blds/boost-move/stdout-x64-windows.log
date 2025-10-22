@@ -1,9 +1,0 @@
-Downloading https://github.com/boostorg/move/archive/boost-1.80.0.tar.gz -> boostorg-move-boost-1.80.0.tar.gz
-Successfully downloaded boostorg-move-boost-1.80.0.tar.gz
--- Extracting source C:/Users/bugr2/AppData/Local/vcpkg/downloads/boostorg-move-boost-1.80.0.tar.gz
--- Using source at C:/Users/bugr2/source/repos/Diplom_CPP/vcpkg_installed/vcpkg/blds/boost-move/src/ost-1.80.0-8ab71fa88c.clean
--- Copying headers
--- Copying headers done
--- Installing: C:/Users/bugr2/source/repos/Diplom_CPP/vcpkg_installed/vcpkg/pkgs/boost-move_x64-windows/share/boost-move/usage
--- Installing: C:/Users/bugr2/source/repos/Diplom_CPP/vcpkg_installed/vcpkg/pkgs/boost-move_x64-windows/share/boost-move/copyright
--- Выполнение проверки после сборки

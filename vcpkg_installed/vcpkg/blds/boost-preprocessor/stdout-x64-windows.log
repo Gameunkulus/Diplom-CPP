@@ -1,9 +1,0 @@
-Downloading https://github.com/boostorg/preprocessor/archive/boost-1.80.0.tar.gz -> boostorg-preprocessor-boost-1.80.0.tar.gz
-Successfully downloaded boostorg-preprocessor-boost-1.80.0.tar.gz
--- Extracting source C:/Users/bugr2/AppData/Local/vcpkg/downloads/boostorg-preprocessor-boost-1.80.0.tar.gz
--- Using source at C:/Users/bugr2/source/repos/Diplom_CPP/vcpkg_installed/vcpkg/blds/boost-preprocessor/src/ost-1.80.0-f870c488cd.clean
--- Copying headers
--- Copying headers done
--- Installing: C:/Users/bugr2/source/repos/Diplom_CPP/vcpkg_installed/vcpkg/pkgs/boost-preprocessor_x64-windows/share/boost-preprocessor/usage
--- Installing: C:/Users/bugr2/source/repos/Diplom_CPP/vcpkg_installed/vcpkg/pkgs/boost-preprocessor_x64-windows/share/boost-preprocessor/copyright
--- Выполнение проверки после сборки

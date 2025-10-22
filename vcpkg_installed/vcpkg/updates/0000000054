@@ -1,0 +1,9 @@
+Package: libpq
+Version: 16.0
+Depends: vcpkg-cmake-get-vars, vcpkg-pkgconfig-get-modules
+Architecture: x64-windows
+Multi-Arch: same
+Abi: d8c0785bdb2676d68af7196a9faa70ef9b343e994cb21ba86488984ac1e79459
+Description: The official database access API of postgresql
+Default-Features: lz4, openssl, zlib
+Status: install ok half-installed

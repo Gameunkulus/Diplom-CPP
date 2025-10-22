@@ -1,6 +1,0 @@
-Checking patch src/Makefile.shlib...
-Hunk #1 succeeded at 240 (offset -20 lines).
-Hunk #2 succeeded at 386 (offset -35 lines).
-Checking patch src/interfaces/libpq/Makefile...
-Applied patch src/Makefile.shlib cleanly.
-Applied patch src/interfaces/libpq/Makefile cleanly.

@@ -1,2 +1,0 @@
-C:/Users/bugr2/source/repos/Diplom-CPP/vcpkg_installed/vcpkg/blds/pkgconf/x64-windows-rel/CMakeFiles/edit_cache.dir
-C:/Users/bugr2/source/repos/Diplom-CPP/vcpkg_installed/vcpkg/blds/pkgconf/x64-windows-rel/CMakeFiles/rebuild_cache.dir

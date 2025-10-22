@@ -1,9 +1,0 @@
-Downloading https://github.com/boostorg/headers/archive/boost-1.87.0.tar.gz -> boostorg-headers-boost-1.87.0.tar.gz
-Successfully downloaded boostorg-headers-boost-1.87.0.tar.gz
--- Extracting source C:/Users/bugr2/AppData/Local/vcpkg/downloads/boostorg-headers-boost-1.87.0.tar.gz
--- Using source at C:/Users/bugr2/source/repos/Diplom_CPP/vcpkg_installed/vcpkg/blds/boost-headers/src/ost-1.87.0-9accdc5627.clean
--- Found external ninja('1.12.1').
--- Configuring x64-windows
--- Building x64-windows-rel
--- Installing: C:/Users/bugr2/source/repos/Diplom_CPP/vcpkg_installed/vcpkg/pkgs/boost-headers_x64-windows/share/boost-headers/copyright
--- Выполнение проверки после сборки

@@ -1,0 +1,8 @@
+Package: boost-config
+Version: 1.80.0
+Depends: boost-vcpkg-helpers
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 51827ce9cd9c29478e78a5e7c20b126219cec87281a73df77d96881fd3f55101
+Description: Boost config module
+Status: install ok half-installed

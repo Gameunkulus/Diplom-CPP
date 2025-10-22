@@ -1,5 +1,4 @@
 -- Using cached jtv-libpqxx-7.8.1.tar.gz
--- Cleaning sources at C:/Users/bugr2/source/repos/Diplom-CPP/vcpkg_installed/vcpkg/blds/libpqxx/src/7.8.1-97e2af3d36.clean. Use --editable to skip cleaning for the packages you specify.
 -- Extracting source C:/Users/bugr2/AppData/Local/vcpkg/downloads/jtv-libpqxx-7.8.1.tar.gz
 -- Applying patch fix_build_with_vs2017.patch
 -- Using source at C:/Users/bugr2/source/repos/Diplom-CPP/vcpkg_installed/vcpkg/blds/libpqxx/src/7.8.1-97e2af3d36.clean
