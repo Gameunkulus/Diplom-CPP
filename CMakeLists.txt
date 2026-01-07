@@ -9,18 +9,19 @@ endif()
 
 project(Diplom_CPP)
 
-set(OPENSSL_ROOT_DIR "C:\\Program Files\\OpenSSL-Win64")
+set(OPENSSL_ROOT_DIR "..\\libs\\openssl_64")
 
-set(BOOST_ROOT "..\\boost_1_80_0")
+set(BOOST_ROOT "..\\libs\\boost")
 
-set(libpqxx_DIR "C:\\Program Files\\libpqxx-7.10.3")
+set(libpqxx_DIR "..\\libs\\libpqxx")
+#set(libpqxx_DIR "..\\libs\\libpqxx\\lib\\cmake\\libpqxx")
 
 add_compile_definitions(_WIN32_WINNT=0x0A01)
 
 # PQXX
-set(PostgreSQL_ADDITIONAL_VERSIONS "15")
+set(PostgreSQL_ADDITIONAL_VERSIONS "16")
 
-add_subdirectory(${libpqxx_DIR} libpqxx-build) 
+#add_subdirectory(${libpqxx_DIR} libpqxx-build) 
 
 # OpenSSL
 find_package(OpenSSL REQUIRED)

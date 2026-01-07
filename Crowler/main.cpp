@@ -8,8 +8,8 @@
 #include "http_utils.h"
 #include <functional>
 
-#include "../Ini/ini_file.h"
-#include "../data/data_base.h"
+#include "../ini_file/ini_file.h"
+#include "../data_base/data_base.h"
 
 #include <boost/locale.hpp>
 #include <regex>
@@ -95,7 +95,7 @@ std::map<std::string, unsigned int> clear_html_tag(const std::string& html)
 
 Link make_first_link(const std::string& url)
 {
-	std::regex ur("(https?)?(:?\/\/)?([[:alnum:]-_]+\..*?)?(\/.*)");
+	std::regex ur(R"((https?)?(:?\/\/)?([[:alnum:]-_]+\..*?)?(\/.*))");
 
 	std::smatch sm;
 	std::regex_search(url, sm, ur);
@@ -137,7 +137,7 @@ Link make_first_link(const std::string& url)
 
 Link make_link(const std::string& url, const Link& current_link)
 {
-	std::regex ur("(https?)?(:?\/\/)?([[:alnum:]_-]+\.[^\/]+)?(\/.*(#[^\/]+$)?)");
+	std::regex ur(R"((https?)?(:?\/\/)?([[:alnum:]_-]+\.[^\/]+)?(\/.*(#[^\/]+$)?))");
 
 	std::smatch sm;
 	std::regex_search(url, sm, ur);
@@ -261,19 +261,17 @@ void parseLink(const Link& link, int depth, data_base& db)
 int main()
 {
 	setlocale(LC_ALL, "ru_RU.utf-8");
-	try {
-		ini_parser ini_file("C:\Users\bugr2\source\repos\Diplom-CPP\config.ini");
+	std::string db_name;
+	try 
+	{
+		ini_file ini_file("config.ini");
 
 		std::string start_page = ini_file.get_value("Client.start_page");
 		int recursion_depth = std::stoi(ini_file.get_value("Client.recursion_depth"));
 
-		std::string initialize_connection_db("host=" + ini_file.get_value("DataBase.bd_host") +
-			" port=" + ini_file.get_value("DataBase.bd_port") +
-			" dbname=" + ini_file.get_value("DataBase.bd_name") +
-			" user=" + ini_file.get_value("DataBase.bd_user") +
-			" password=" + ini_file.get_value("DataBase.bd_pass"));
-
-		data_base db(initialize_connection_db);
+		db_name = ini_file.get_value( "DataBase.bd_name" );
+		data_base db( ini_file.get_value( "DataBase.bd_host" ), ini_file.get_value( "DataBase.bd_port" ), 
+			db_name, ini_file.get_value( "DataBase.bd_user" ), ini_file.get_value( "DataBase.bd_pass" ) );
 
 		int numThreads = std::thread::hardware_concurrency();
 		std::vector<std::thread> threadPool;
@@ -292,7 +290,6 @@ int main()
 
 		std::this_thread::sleep_for(std::chrono::seconds(2));
 
-
 		{
 			std::lock_guard<std::mutex> lock(mtx);
 			exitThreadPool = true;
@@ -302,6 +299,14 @@ int main()
 		for (auto& t : threadPool) {
 			t.join();
 		}
+	}
+	catch ( const pqxx::broken_connection& e )
+	{
+		std::cout << e.what() << std::endl;
+		std::cout << "possible reasons: " << std::endl 
+			<< "\tconnection is anavailable;" << std::endl
+			<< "\tserver has no db with name '" << db_name << "'; " << std::endl
+			<< "\tpermission denied." << std::endl;
 	}
 	catch (const std::exception& e)
 	{

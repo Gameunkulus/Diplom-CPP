@@ -1,6 +1,6 @@
 #pragma once
-#include<fstream>
-#include<map>
+#include <fstream>
+#include <map>
 
 class ini_file {
 public: 
@@ -8,16 +8,15 @@ public:
 	ini_file(const std::string& fileName);
 	~ini_file();
 
-	std::string get_value(const std::string& key);
-private:
+	std::string get_value(std::string_view key) const;
 
+private:
 	std::ifstream file_;
-	int current_read_line_ = 1;
-	std::string current_section_ = "";
-	std::string current_value_ = "";
-	std::map<std::string, std::map<std::string, std::string>> value_;
+	std::string current_section_;
+	std::string current_value_;
+	std::map<std::string, std::map<std::string, std::string, std::less<>>, std::less<>> value_;
 	void read_file_();
-	void get_section_(std::string& read_name);
-	void get_value_(std::string& read_name);
-	void ignore_space_to_word();
+	void read_section_(std::string_view read_name);
+	void read_value_(std::string_view read_name);
+	std::string ignore_space_(std::string_view value) const;
 };

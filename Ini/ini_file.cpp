@@ -1,14 +1,14 @@
 #include "ini_file.h"
 
-#include<iostream>
-#include<regex>
+#include <iostream>
+#include <regex>
 
-#define ALLOWED_CHAR_NAME "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890_-"
+constexpr auto ALLOWED_CHAR_NAME = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890_-";
 
 ini_file::ini_file(const std::string& file_name)
 {
 	file_.open(file_name);
-		read_file_();
+	read_file_();
 }
 
 ini_file::~ini_file()
@@ -19,95 +19,82 @@ ini_file::~ini_file()
 	}
 }
 
-std::string ini_file::get_value(const std::string& key)
+std::string ini_file::get_value(std::string_view key) const
 {
-	int position_dot = key.find('.');
+	size_t position_dot = key.find('.');
 	
-	std::string name_section = key.substr(0, position_dot);
-	std::string name_value = key.substr(position_dot + 1, key.length());
-		
-	return value_[name_section][name_value];
-	
+	std::string_view name_section = key.substr(0, position_dot);
+	auto section_it = value_.find( name_section );
+	if ( section_it != value_.end() )
+	{
+		std::string_view name_value = key.substr(position_dot + 1, key.length());
+		auto value_it = section_it->second.find( name_value );
+		if ( value_it != section_it->second.end() )
+		{
+			return value_it->second;
+		}
+	}
+	return std::string();
 }
 
 void ini_file::read_file_() 
 {
-	std::string word_from_ini;
-	bool next_read_not_error = true;
-	do {
-		do
+	do
+	{
+		std::string line;
+		std::getline(file_, line);
+		if ( !line.empty() )
 		{
-			file_ >> word_from_ini;
-			if (word_from_ini.at(0) == ';' || word_from_ini.at(0) == '#')
+			if ( line.at( 0 ) == ';' || line.at( 0 ) == '#' )
 			{
-				file_.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-				file_.unget();
+				continue;
 			}
 			else
 			{
-				if (word_from_ini.at(0) == '[')
+				if ( line.at( 0 ) == '[' )
 				{
-					get_section_(word_from_ini);
-					next_read_not_error = false;
+					read_section_( line );
 				}
-				else if ((word_from_ini.at(0) >= 'A' && word_from_ini.at(0) <= 'Z') || (word_from_ini.at(0) >= 'a' && word_from_ini.at(0) <= 'z')) { 
-					get_value_(word_from_ini);
-					next_read_not_error = false;
+				else if ( (line.at( 0 ) >= 'A' && line.at( 0 ) <= 'Z') || (line.at( 0 ) >= 'a' && line.at( 0 ) <= 'z') ) {
+					read_value_( line );
 				}
 			}
-			ignore_space_to_word();
-		} while (file_.peek() != '\n' && !file_.eof());
-		++current_read_line_;
-		next_read_not_error = true;
+		}
 	} while (!file_.eof());
 }
 
-void ini_file::get_section_(std::string& read_name)
+void ini_file::read_section_(std::string_view read_name)
 {
-	int close_char = read_name.find(']');
-	
-	read_name.erase(close_char);
-	read_name.erase(0, 1);
-	current_section_ = read_name;
-	value_[current_section_];
-	
-}
-
-void ini_file::get_value_(std::string& read_name)
-{
-	std::string word_from_ini;
-	int eq_position = read_name.find('=');
-	if (eq_position == std::string::npos)
+	size_t close_char = read_name.find(']');
+	if (close_char != std::string_view::npos)
 	{
-		current_value_ = read_name;
-		file_ >> word_from_ini;
-		if (word_from_ini.length() == 1)
-		{
-		ignore_space_to_word();
-		file_ >> word_from_ini;
-		value_[current_section_][current_value_] = word_from_ini;
-		}
-		else {
-		word_from_ini.erase(0, 1);
-		value_[current_section_][current_value_] = word_from_ini;
-		}	
-	}
-	else {
-		current_value_ = read_name.substr(0, eq_position);
-		if (read_name.length() == eq_position + 1) {
-			file_ >> word_from_ini;
-			value_[current_section_][current_value_] = word_from_ini;
-		}
-		else {
-			value_[current_section_][current_value_] = read_name.substr(eq_position + 1, read_name.length() - eq_position);
-		}
+		current_section_ = read_name.substr( 1, close_char - 1 );
+		value_[current_section_];
 	}
 }
 
-void ini_file::ignore_space_to_word()
+void ini_file::read_value_(std::string_view read_name)
 {
-	while (file_.peek() == ' ' || file_.peek() == '\t')
+	size_t eq_position = read_name.find('=');
+	if (eq_position == std::string_view::npos)
 	{
-		file_.get();
+		current_value_ = ignore_space_( read_name );
+		value_[current_section_][current_value_];
 	}
+	else 
+	{
+		auto param_name = read_name.substr(0, eq_position);
+		current_value_ = ignore_space_( param_name );
+		
+		auto param_value = read_name.substr( eq_position + 1, read_name.length() - eq_position );
+		value_[current_section_][current_value_] = ignore_space_( param_value );
+	}
+}
+
+std::string ini_file::ignore_space_( std::string_view value ) const
+{
+	auto is_not_space = []( auto c ) { return !std::isspace( c ); };
+	std::string trimmed_value;
+	std::copy_if( value.begin(), value.end(), std::back_inserter( trimmed_value ), is_not_space );
+	return trimmed_value;
 }

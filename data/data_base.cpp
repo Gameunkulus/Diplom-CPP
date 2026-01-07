@@ -1,63 +1,69 @@
-#include "../data/data_base.h"
+#include "data_base.h"
+#include <format>
 
-data_base::data_base(const std::string& idb) :conn_db_{ pqxx::connection(idb) }
+data_base::data_base( const std::string& host, const std::string& port, const std::string& dbname, const std::string& user, const std::string& password ) 
+	: data_base( std::string{ "host=" + host + " " + "port=" + port + " " + "dbname=" + dbname + " " + "user=" + user + " " + "password=" + password } )
 {
-	create_db_();
-	conn_db_.prepare("add_keyword", "INSERT INTO keywords (keyword) VALUES ( $1 )");
-	conn_db_.prepare("add_url", "INSERT INTO urls (url) VALUES ( $1 )");
-	conn_db_.prepare("add_qty", "INSERT INTO keyword_urs_qty (id_keyword, id_url, quantity) VALUES ("
-		"(SELECT id FROM keywords WHERE keyword = $1),"
-		"(SELECT id FROM urls WHERE url = $2), $3)");
 }
 
-void data_base::add_keyword_link(const std::map<std::string, unsigned int>& words, const std::string& link)
+data_base::data_base( const std::string& connection_string ) : conn_db_( pqxx::connection( connection_string ) )
+{
+	create_db_();
+	conn_db_.prepare( query::add_keyword.data(), "INSERT INTO keywords (keyword) VALUES ( $1 )" );
+	conn_db_.prepare( query::add_url.data(), "INSERT INTO urls (url) VALUES ( $1 )" );
+	conn_db_.prepare( query::add_qty.data(), "INSERT INTO keyword_urs_qty (id_keyword, id_url, quantity) VALUES ("
+		"(SELECT id FROM keywords WHERE keyword = $1),"
+		"(SELECT id FROM urls WHERE url = $2), $3)" );
+}
+
+
+bool data_base::add_keyword_link(const std::map<std::string, unsigned int>& words, const std::string& link)
 {
 	if (check_url(link))
-	{
-		return;
-	}
+		return false;
 	pqxx::work tx{ conn_db_ };
-	tx.exec_prepared("add_url", link);
+	tx.exec(pqxx::prepped(pqxx::zview(query::add_url)), link);
 	tx.commit();
 	for (const auto& [key, value] : words)
 	{
 		if (!check_keyword(key))
 		{
-			tx.exec_prepared("add_keyword", key);
+			tx.exec(pqxx::prepped(pqxx::zview(query::add_keyword)), key);
 			tx.commit();
 		}
-		tx.exec_prepared("add_qty", key, link, std::to_string(value));
+		tx.exec(pqxx::prepped(pqxx::zview(query::add_qty)), pqxx::params{key, link, std::to_string(value)});
 	}
 	tx.commit();
+	return true;
 }
 
-bool data_base::check_url(const std::string& url)
+bool data_base::check_url(std::string_view url)
 {
-	pqxx::work tx{ conn_db_ };
+	pqxx::read_transaction tx{ conn_db_ };
 	bool check_id = false;
-	check_id = tx.query_value<bool>("SELECT EXISTS(SELECT id FROM urls WHERE url = \'" + url + "\');");
+	check_id = tx.query_value<bool>(R"(SELECT EXISTS(SELECT id FROM urls WHERE url = $1);)", pqxx::params{url});
 	return check_id;
 }
 
-bool data_base::check_keyword(const std::string& keyword)
+bool data_base::check_keyword(std::string_view keyword)
 {
-	pqxx::work tx{ conn_db_ };
+	pqxx::read_transaction tx{ conn_db_ };
 	bool check_id = false;
-	check_id = tx.query_value<bool>("SELECT EXISTS(SELECT id FROM keywords WHERE keyword = \'" + keyword + "\');");
+	check_id = tx.query_value<bool>(R"(SELECT EXISTS(SELECT id FROM keywords WHERE keyword = $1);)", pqxx::params{keyword});
 	return check_id;
 }
 
-std::map<std::string, int> data_base::get_urls_qry(const std::string& keyword)
+std::map<std::string, int> data_base::get_urls_qry(std::string_view keyword)
 {
-	pqxx::work tx{ conn_db_ };
+	pqxx::read_transaction tx{ conn_db_ };
 	std::map<std::string, int> result;
 	std::string key_esc = tx.esc(keyword);
-	for (auto [url, qty] : tx.query<std::string, int>
+	for (auto const& [url, qty] : tx.query<std::string, int>
 		("SELECT u.url, kuq.quantity "
 			"FROM urls u "
 			"JOIN keyword_urs_qty kuq ON u.id = kuq.id_url "
 			"JOIN keywords k ON kuq.id_keyword = k.id "
-			"WHERE k.keyword = '" + key_esc + "' "))
+			"WHERE k.keyword = $1 ", pqxx::params{key_esc}))
 	{
 		result[url] = qty;
 	};

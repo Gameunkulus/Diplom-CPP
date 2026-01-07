@@ -1,6 +1,6 @@
 #include "http_connection.h"
 
-#include <stream>
+#include <sstream>
 #include <iomanip>
 #include <locale>
 #include <codecvt>

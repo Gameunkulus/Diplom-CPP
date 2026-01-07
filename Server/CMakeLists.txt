@@ -1,5 +1,6 @@
 cmake_minimum_required(VERSION 3.8)
 
+project(HttpServerApp)
 
 add_executable(HttpServerApp 
 	main.cpp
@@ -8,20 +9,31 @@ add_executable(HttpServerApp
 	)
 
 
-target_compile_features(HttpServerApp PRIVATE cxx_std_17) 
+target_compile_features(${PROJECT_NAME} PRIVATE cxx_std_20) 
 
-target_link_libraries(HttpServerApp pqxx)  
+set(libpqxx_DIR "..\\..\\libs\\libpqxx\\lib\\cmake\\libpqxx")
+find_package(libpqxx REQUIRED)
 
-target_include_directories(HttpServerApp PRIVATE ${Boost_INCLUDE_DIRS})
+target_link_libraries(${PROJECT_NAME} libpqxx::pqxx)
 
-target_link_libraries(HttpServerApp ${Boost_LIBRARIES})
+set(Boost_USE_STATIC_LIBS ON)       
+set(Boost_USE_MULTITHREADED ON) 
 
-target_link_libraries(HttpServerApp OpenSSL::SSL)
+set(BOOST_ROOT "..\\..\\libs\\boost")
+find_package(Boost REQUIRED COMPONENTS locale)
+
+target_link_libraries(${PROJECT_NAME} Boost::locale)
+
+#target_include_directories(${PROJECT_NAME} PRIVATE ${Boost_INCLUDE_DIRS})
+
+#target_link_libraries(${PROJECT_NAME} ${Boost_LIBRARIES})
+
+target_link_libraries(${PROJECT_NAME} OpenSSL::SSL)
 
 target_include_directories(ini_file PUBLIC "../ini_file")
 
-target_link_libraries(HttpServerApp ini_file)
+target_link_libraries(${PROJECT_NAME} ini_file)
 
 target_include_directories(data_base PUBLIC "../data_base")
 
-target_link_libraries(HttpServerApp data_base)
+target_link_libraries(${PROJECT_NAME} data_base)

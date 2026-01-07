@@ -5,11 +5,11 @@
 #include <string>
 #include <map>
 
-#include <Windows.h>
 #include "http_connection.h"
+#include <Windows.h>
 
-#include "../Ini/ini_file.h"
-#include "../data/data_base.h"
+#include "../ini_file/ini_file.h"
+#include "../data_base/data_base.h"
 
 void httpServer(tcp::acceptor& acceptor, tcp::socket& socket, data_base& db)
 {
@@ -30,7 +30,7 @@ int main(int argc, char* argv[])
 
 	try
 	{
-		ini_parser ini_file("C:\Users\bugr2\source\repos\Diplom-CPP\config.ini");
+		ini_file ini_file(R"(C:\Users\bugr2\source\repos\Diplom-CPP\config.ini)");
 
 		std::string initialize_connection_db("host=" + ini_file.get_value("DataBase.bd_host") +
 			" port=" + ini_file.get_value("DataBase.bd_port") +
