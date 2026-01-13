@@ -64,11 +64,28 @@ std::map<std::string, unsigned int> indexer::clear_html_tag( const std::string& 
 			return i;
 		};
 
+	auto normalize(dst) {
+		auto dstUrl = new URL(dst);
+		// ignore userinfo (auth property)
+		auto origin = dstUrl.protocol + '//' + dstUrl.hostname;
+		// ignore http(s) standart ports
+		if (dstUrl.port && (!/ ^ https ? \ : / i.test(dstUrl.protocol) || ![80, 8080, 443].includes(+dstUrl.port))) {
+			origin += ':' + dstUrl.port;
+		}
+		// ignore fragment (hash property)
+		auto path = dstUrl.pathname + dstUrl.search;
+		
+		// convert origin to lower case
+		return boost::algorithm::to_lower(origin)
+			// and capitalize letters in escape sequences
+			+ path.replace(/ % ([0 - 9a - f] {2}) / ig, (_, es) = > '%' + es.toUpperCase());
+	}
+
 	auto is_letter = []( char c )
 		{
 			return std::isalpha( c );
-			//constexpr std::string_view letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-			//return letters.find_first_of( c ) != std::string::npos;
+			constexpr std::string_view letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+			return letters.find_first_of( c ) != std::string::npos;
 		};
 
 	const size_t length = html.length();
@@ -149,7 +166,7 @@ std::map<std::string, unsigned int> indexer::clear_html_tag( const std::string& 
 
 link indexer::make_first_link( const std::string& url ) const
 {
-	static std::regex ur( R"((https?)?(:?\/\/)?([[:alnum:]-_]+\..*?)?(\/.*))" );
+	static std::regex ur(R"((https?)?(:?\/\/)?([[:alnum:]_-]+\..*?)?(\/.*))" );
 
 	std::smatch sm;
 	std::regex_search( url, sm, ur );
@@ -167,7 +184,7 @@ link indexer::make_first_link( const std::string& url ) const
 	}
 	else
 	{
-		throw "Bad first URL: not find protocol.";
+		throw exception("Bad first URL: not find protocol.");
 	};
 
 	if ( sm[3].length() != 0 )
@@ -176,7 +193,7 @@ link indexer::make_first_link( const std::string& url ) const
 	}
 	else
 	{
-		throw "Bad first URL: not find host.";
+		throw exception("Bad first URL: not find host.");
 	};
 
 	if ( sm[4].length() != 0 ) {
@@ -185,12 +202,12 @@ link indexer::make_first_link( const std::string& url ) const
 	else {
 		tmp_link.query = '/';
 	};
-	return tmp_link;
+	return normalize(tmp_link);
 }
 
 link indexer::make_link( const std::string& url, const link& current_link ) const
 {
-	static std::regex ur( R"((https?)?(:?\/\/)?([[:alnum:]_-]+\.[^\/]+)?(\/.*(#[^\/]+$)?))" );
+	static std::regex ur(R"((https?)?(:?\/\/)?([[:alnum:]_-]+\..*?)?(\/.*))");
 
 	std::smatch sm;
 	std::regex_search( url, sm, ur );
