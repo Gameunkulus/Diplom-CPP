@@ -20,129 +20,131 @@ namespace ssl = boost::asio::ssl;
 
 using tcp = boost::asio::ip::tcp;
 
-namespace http_utils
+bool isText(const boost::beast::multi_buffer::const_buffers_type& b)
 {
-	bool is_text( const boost::beast::multi_buffer::const_buffers_type& b )
+	for (auto itr = b.begin(); itr != b.end(); itr++)
 	{
-		for ( auto buf_it = b.begin(); buf_it != b.end(); buf_it++ )
+		for (int i = 0; i < (*itr).size(); i++)
 		{
-			auto buf_size = (*buf_it).size();
-			auto buf_data = (*buf_it).data();
-			for ( int i = 0; i < buf_size; i++ )
+			if (*((const char*)(*itr).data() + i) == 0)
 			{
-				if ( *((const char*)buf_data + i) == 0 )
-				{
-					return false;
-				}
+				return false;
 			}
 		}
-		return true;
 	}
 
-	std::string get_html_content( const link& link )
+	return true;
+}
+
+std::string getHtmlContent(const Link& link)
+{
+
+	std::string result;
+
+	try
 	{
-		std::string result;
+		std::string host = link.hostName;
+		std::string query = link.query;
 
-		try
+		net::io_context ioc;
+
+		if (link.protocol == ProtocolType::HTTPS)
 		{
-			std::string host = link.host_name;
-			std::string query = link.query;
 
-			net::io_context ioc;
+			ssl::context ctx(ssl::context::tlsv13_client);
+			ctx.set_default_verify_paths();
 
-			if ( link.protocol == ProtocolType::HTTPS )
+			beast::ssl_stream<beast::tcp_stream> stream(ioc, ctx);
+			stream.set_verify_mode(ssl::verify_none);
+
+			stream.set_verify_callback([](bool preverified, ssl::verify_context& ctx) {
+				return true; 
+				});
+
+
+			if (!SSL_set_tlsext_host_name(stream.native_handle(), host.c_str())) {
+				beast::error_code ec{ static_cast<int>(::ERR_get_error()), net::error::get_ssl_category() };
+				throw beast::system_error{ ec };
+			}
+
+			ip::tcp::resolver resolver(ioc);
+			get_lowest_layer(stream).connect(resolver.resolve({ host, "https" }));
+			get_lowest_layer(stream).expires_after(std::chrono::seconds(30));
+
+
+			http::request<http::empty_body> req{ http::verb::get, query, 11 };
+			req.set(http::field::host, host);
+			req.set(http::field::user_agent, BOOST_BEAST_VERSION_STRING);
+
+			stream.handshake(ssl::stream_base::client);
+			http::write(stream, req);
+
+			beast::flat_buffer buffer;
+			http::response<http::dynamic_body> res;
+			http::read(stream, buffer, res);
+
+			if (isText(res.body().data()))
 			{
-				ssl::context ctx( ssl::context::tlsv13_client );
-				ctx.set_default_verify_paths();
-
-				beast::ssl_stream<beast::tcp_stream> stream( ioc, ctx );
-				stream.set_verify_mode( ssl::verify_none );
-
-				stream.set_verify_callback( []( bool preverified, ssl::verify_context& ctx ) {
-					return true;
-					} );
-
-				if ( !SSL_set_tlsext_host_name( stream.native_handle(), host.c_str() ) ) {
-					beast::error_code ec{ static_cast<int>(::ERR_get_error()), net::error::get_ssl_category() };
-					throw beast::system_error{ ec };
-				}
-
-				ip::tcp::resolver resolver( ioc );
-				get_lowest_layer( stream ).connect( resolver.resolve( { host, "https" } ) );
-				get_lowest_layer( stream ).expires_after( std::chrono::seconds( 30 ) );
-
-				http::request<http::empty_body> req{ http::verb::get, query, 11 };
-				req.set( http::field::host, host );
-				req.set( http::field::user_agent, BOOST_BEAST_VERSION_STRING );
-
-				stream.handshake( ssl::stream_base::client );
-				http::write( stream, req );
-
-				beast::flat_buffer buffer;
-				http::response<http::dynamic_body> res;
-				http::read( stream, buffer, res );
-
-				if ( auto const& body = res.body().cdata(); is_text( body ) )
-				{
-					result = buffers_to_string( body );
-				}
-				else
-				{
-					std::cout << "This is not a text link, bailing out..." << std::endl;
-				}
-
-				beast::error_code ec;
-				stream.shutdown( ec );
-				if ( ec == net::error::eof ) {
-					ec = {};
-				}
-
-				if ( ec ) {
-					throw beast::system_error{ ec };
-				}
+				result = buffers_to_string(res.body().data());
 			}
 			else
 			{
-				tcp::resolver resolver( ioc );
-				beast::tcp_stream stream( ioc );
+				std::cout << "This is not a text link, bailing out..." << std::endl;
+			}
 
-				auto const results = resolver.resolve( host, "http" );
+			beast::error_code ec;
+			stream.shutdown(ec);
+			if (ec == net::error::eof) {
+				ec = {};
+			}
 
-				stream.connect( results );
-
-				http::request<http::string_body> req{ http::verb::get, query, 11 };
-				req.set( http::field::host, host );
-				req.set( http::field::user_agent, BOOST_BEAST_VERSION_STRING );
-
-				http::write( stream, req );
-
-				beast::flat_buffer buffer;
-
-				http::response<http::dynamic_body> res;
-
-				http::read( stream, buffer, res );
-
-				if ( auto const& body = res.body().cdata(); is_text( body ) )
-				{
-					result = buffers_to_string( body );
-				}
-				else
-				{
-					std::cout << "This is not a text link, bailing out..." << std::endl;
-				}
-
-				beast::error_code ec;
-				stream.socket().shutdown( tcp::socket::shutdown_both, ec );
-
-				if ( ec && ec != beast::errc::not_connected )
-					throw beast::system_error{ ec };
+			if (ec) {
+				throw beast::system_error{ ec };
 			}
 		}
-		catch ( const std::exception& e )
+		else
 		{
-			std::cout << e.what() << std::endl;
-		}
+			tcp::resolver resolver(ioc);
+			beast::tcp_stream stream(ioc);
 
-		return result;
+			auto const results = resolver.resolve(host, "http");
+
+			stream.connect(results);
+
+			http::request<http::string_body> req{ http::verb::get, query, 11 };
+			req.set(http::field::host, host);
+			req.set(http::field::user_agent, BOOST_BEAST_VERSION_STRING);
+
+			http::write(stream, req);
+
+			beast::flat_buffer buffer;
+
+			http::response<http::dynamic_body> res;
+
+			http::read(stream, buffer, res);
+
+			if (isText(res.body().data()))
+			{
+				result = buffers_to_string(res.body().data());
+			}
+			else
+			{
+				std::cout << "This is not a text link, bailing out..." << std::endl;
+			}
+
+			beast::error_code ec;
+			stream.socket().shutdown(tcp::socket::shutdown_both, ec);
+
+			
+			if (ec && ec != beast::errc::not_connected)
+				throw beast::system_error{ ec };
+
+		}
 	}
+	catch (const std::exception& e)
+	{
+		std::cout << e.what() << std::endl;
+	}
+
+	return result;
 }

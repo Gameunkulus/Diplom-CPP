@@ -1,7 +1,59 @@
-.vs/
-x64/
-*.user
-*.filters
-.CMake
+# Build
 out/
-vcpkq_installed/
+build/
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+*.dir/
+
+# IDE — Visual Studio
+.vs/
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
+*.sln
+*.suo
+*.user
+*.userosscache
+*.sdf
+*.opensdf
+*.opendb
+*.db
+*.ipch
+*.aps
+*.ncb
+*.pdb
+*.ilk
+*.obj
+*.exe
+*.dll
+*.lib
+*.log
+*.tlog
+*.idb
+*.manifest
+*.res
+*.lastbuildstate
+*.iobj
+*.ipdb
+Debug/
+Release/
+x64/
+x86/
+
+# IDE — CLion / VSCode
+.idea/
+.vscode/
+*.swp
+*~
+
+# vcpkg (local installs, not the repo)
+vcpkg_installed/
+
+# OS
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Config with credentials (add template instead)
+# config.ini

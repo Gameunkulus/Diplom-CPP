@@ -8,26 +8,16 @@ enum class ProtocolType
 	HTTPS = 1
 };
 
-struct link
+struct Link
 {
 	ProtocolType protocol;
-	std::string host_name;
+	std::string hostName;
 	std::string query;
 
-	bool operator==(const link& l) const
+	bool operator==(const Link& l) const
 	{
 		return protocol == l.protocol
-			&& host_name == l.host_name
+			&& hostName == l.hostName
 			&& query == l.query;
 	}
 };
-
-inline std::string to_string( const link& link ) 
-{
-	if ( link.protocol == ProtocolType::HTTP ) {
-		return("http://" + link.host_name + link.query);
-	}
-	else {
-		return("https://" + link.host_name + link.query);
-	}
-}

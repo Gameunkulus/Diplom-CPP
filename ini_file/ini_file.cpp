@@ -1,9 +1,7 @@
 #include "ini_file.h"
-
+#include <string>
 #include <iostream>
-#include <regex>
-
-constexpr auto ALLOWED_CHAR_NAME = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890_-";
+#include <algorithm>
 
 ini_file::ini_file(const std::string& file_name)
 {
@@ -78,23 +76,28 @@ void ini_file::read_value_(std::string_view read_name)
 	size_t eq_position = read_name.find('=');
 	if (eq_position == std::string_view::npos)
 	{
-		current_value_ = ignore_space_( read_name );
+		current_value_ = trim_( read_name );
 		value_[current_section_][current_value_];
 	}
 	else 
 	{
 		auto param_name = read_name.substr(0, eq_position);
-		current_value_ = ignore_space_( param_name );
+		current_value_ = trim_( param_name );
 		
 		auto param_value = read_name.substr( eq_position + 1, read_name.length() - eq_position );
-		value_[current_section_][current_value_] = ignore_space_( param_value );
+		value_[current_section_][current_value_] = trim_( param_value );
 	}
 }
 
-std::string ini_file::ignore_space_( std::string_view value ) const
+std::string ini_file::trim_( std::string_view value ) const
 {
-	auto is_not_space = []( auto c ) { return !std::isspace( c ); };
-	std::string trimmed_value;
-	std::copy_if( value.begin(), value.end(), std::back_inserter( trimmed_value ), is_not_space );
-	return trimmed_value;
+	// Обрезаем пробелы только по краям (leading/trailing),
+	// внутренние пробелы сохраняются (важно для путей типа "D:\Test Docs")
+	auto begin = std::find_if(value.begin(), value.end(),
+		[](unsigned char c) { return !std::isspace(c); });
+	auto end = std::find_if(value.rbegin(), value.rend(),
+		[](unsigned char c) { return !std::isspace(c); }).base();
+
+	if (begin >= end) return {};
+	return std::string(begin, end);
 }

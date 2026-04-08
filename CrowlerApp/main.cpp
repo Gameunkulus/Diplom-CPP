@@ -1,52 +1,76 @@
 #include <iostream>
+#include <sstream>
+#include <iomanip>
 
 #include "../ini_file/ini_file.h"
 #include "../data_base/data_base.h"
+#include "indexer.h"
 
+#ifdef _WIN32
 #define NOMINMAX
 #include <Windows.h>
-
-#include "indexer.h"
+#endif
 
 int main()
 {
-	setlocale(LC_ALL, "ru_RU.utf-8");
-	std::string db_name;
-	try 
-	{
-		ini_file ini_file("config.ini");
+#ifdef _WIN32
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
+#endif
+    setlocale(LC_ALL, "ru_RU.utf-8");
 
-		std::string start_page = ini_file.get_value("Client.start_page");
-		int recursion_depth = std::stoi(ini_file.get_value("Client.recursion_depth"));
+    std::string db_name;
+    try
+    {
+        ini_file ini("config.ini");
 
-		db_name = ini_file.get_value( "DataBase.bd_name" );
-		auto db = std::make_shared<data_base>( ini_file.get_value( "DataBase.bd_host" ), ini_file.get_value( "DataBase.bd_port" ),
-			db_name, ini_file.get_value( "DataBase.bd_user" ), ini_file.get_value( "DataBase.bd_pass" ) );
+        std::string documents_path = ini.get_value("Client.documents_path");
+        std::string extensions_str = ini.get_value("Client.file_extensions");
+        std::string index_mode = ini.get_value("Client.index_mode");
+        bool smart_mode = (index_mode == "smart");
 
-		unsigned int num_threads = std::thread::hardware_concurrency();
-		auto mgr = std::make_shared<task_manager>( num_threads );
-		indexer ind( mgr, db );
+        std::vector<std::string> extensions;
+        std::stringstream ss(extensions_str);
+        std::string ext;
+        while (std::getline(ss, ext, ','))
+        {
+            ext.erase(std::remove_if(ext.begin(), ext.end(), ::isspace), ext.end());
+            if (!ext.empty()) extensions.push_back(ext);
+        }
 
-		mgr->push_task( [start_page, recursion_depth, &ind]()
-			{
-				ind.parse_link( ind.make_first_link( start_page ), recursion_depth );
-			} );
+        db_name = ini.get_value("DataBase.bd_name");
+        auto db = std::make_shared<data_base>(
+            ini.get_value("DataBase.bd_host"),
+            ini.get_value("DataBase.bd_port"),
+            db_name,
+            ini.get_value("DataBase.bd_user"),
+            ini.get_value("DataBase.bd_pass"));
 
-		std::this_thread::sleep_for(std::chrono::seconds(2));
+        std::cout << "========================================" << std::endl;
+        std::cout << "  File System Indexer v2.0" << std::endl;
+        std::cout << "  Directory:  " << documents_path << std::endl;
+        std::cout << "  Extensions:";
+        for (const auto& e : extensions) std::cout << " " << e;
+        std::cout << std::endl;
+        std::cout << "  Mode:       " << (smart_mode ? "smart" : "full") << std::endl;
+        std::cout << "  Database:   " << db_name << std::endl;
+        std::cout << "========================================\n" << std::endl;
 
-		mgr->wait();
-	}
-	catch ( const pqxx::broken_connection& e )
-	{
-		std::cout << e.what() << std::endl;
-		std::cout << "possible reasons: " << std::endl 
-			<< "\tconnection is anavailable;" << std::endl
-			<< "\tserver has no db with name '" << db_name << "'; " << std::endl
-			<< "\tpermission denied." << std::endl;
-	}
-	catch (const std::exception& e)
-	{
-		std::cout << e.what() << std::endl;
-	}
-	return 0;
+        indexer ind(db);
+        ind.index_directory(documents_path, extensions, smart_mode);
+    }
+    catch (const pqxx::broken_connection& e)
+    {
+        std::cerr << e.what() << std::endl;
+        std::cerr << "Possible reasons:" << std::endl
+            << "  - connection unavailable" << std::endl
+            << "  - database '" << db_name << "' does not exist" << std::endl
+            << "  - permission denied" << std::endl;
+    }
+    catch (const std::exception& e)
+    {
+        std::cerr << "Error: " << e.what() << std::endl;
+    }
+
+    return 0;
 }

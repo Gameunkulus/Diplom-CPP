@@ -1,16 +1,9 @@
 {
-    "dependencies": [
-        "libpqxx",
-        "boost-optional",
-        "cxxopts",
-        "fmt",
-        "range-v3",
-        "pkgconf"
-    ],
-    "overrides": [
-        {
-            "name": "boost-optional",
-            "version": "1.80.0"
-        }
-    ]
+  "dependencies": [
+    "libpqxx",
+    "boost-locale",
+    "boost-beast",
+    "boost-asio",
+    "gtest"
+  ]
 }

@@ -18,5 +18,5 @@ private:
 	void read_file_();
 	void read_section_(std::string_view read_name);
 	void read_value_(std::string_view read_name);
-	std::string ignore_space_(std::string_view value) const;
+	std::string trim_(std::string_view value) const;
 };

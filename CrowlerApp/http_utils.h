@@ -1,9 +1,6 @@
 #pragma once 
-
+#include <vector>
 #include <string>
 #include "link.h"
 
-namespace http_utils
-{
-	std::string get_html_content(const link& link);
-}
+std::string getHtmlContent(const Link& link);
